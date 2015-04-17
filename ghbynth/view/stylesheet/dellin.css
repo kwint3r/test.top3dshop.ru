@@ -1,0 +1,29 @@
+.include {
+	padding: 0 !important;
+	border: 0;
+}
+.include .form {
+	margin: 0;
+}
+.parent td,
+.include .form, 
+.include .form td {
+	border-bottom: 0 !important;
+}
+.include .form td {
+	border-top: 1px dotted #CCCCCC;
+}
+.hidden {
+	display: none;
+}
+.slider-content.insurance {
+	position: relative;
+	height: 10px;
+}
+.slider-content.insurance input {
+	position: absolute;
+	top: -8px;
+}
+.throbber {
+	margin-left: 7px;
+}

@@ -1,0 +1,27 @@
+<?php
+// HTTP
+define('HTTP_SERVER', 'http://top3dshop.ru/');
+
+// HTTPS
+define('HTTPS_SERVER', 'http://top3dshop.ru/');
+
+// DIR
+define('DIR_APPLICATION', '/var/www/top3dshop/data/www/top3dshop.ru/catalog/');
+define('DIR_SYSTEM', '/var/www/top3dshop/data/www/top3dshop.ru/system/');
+define('DIR_DATABASE', '/var/www/top3dshop/data/www/top3dshop.ru/system/database/');
+define('DIR_LANGUAGE', '/var/www/top3dshop/data/www/top3dshop.ru/catalog/language/');
+define('DIR_TEMPLATE', '/var/www/top3dshop/data/www/top3dshop.ru/catalog/view/theme/');
+define('DIR_CONFIG', '/var/www/top3dshop/data/www/top3dshop.ru/system/config/');
+define('DIR_IMAGE', '/var/www/top3dshop/data/www/top3dshop.ru/image/');
+define('DIR_CACHE', '/var/www/top3dshop/data/www/top3dshop.ru/system/cache/');
+define('DIR_DOWNLOAD', '/var/www/top3dshop/data/www/top3dshop.ru/download/');
+define('DIR_LOGS', '/var/www/top3dshop/data/www/top3dshop.ru/system/logs/');
+
+// DB
+define('DB_DRIVER', 'mysqli');
+define('DB_HOSTNAME', 'localhost');
+define('DB_USERNAME', 'top');
+define('DB_PASSWORD', 'eGL5MmAD');
+define('DB_DATABASE', 'u5822246_test_top3dshop');
+define('DB_PREFIX', 'mac_');
+?>

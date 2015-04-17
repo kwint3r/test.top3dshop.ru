@@ -1,0 +1,87 @@
+<modification>
+  <id>Google Analytics - Ecommerce Tracking (Universal Analytics)</id>
+  <version>1.0</version>
+  <vqmver>2.0</vqmver>
+  <author>CODEONETEAM</author>
+  <file name="catalog/controller/checkout/success.php">
+    <operation error="skip">
+      <search position="after">
+        <![CDATA[
+		if (isset($this->session->data['order_id'])) {
+        ]]>
+      </search>
+      <add>
+        <![CDATA[
+			$this->load->model('account/order');
+			
+			$this->data['order_id']       = $this->session->data['order_id'];
+			$this->data['order_info']     = $this->model_account_order->getOrder($this->session->data['order_id']);
+			$this->data['order_totals']   = $this->model_account_order->getOrderTotals($this->session->data['order_id']);
+			$this->data['order_products'] = $this->model_account_order->getOrderProducts($this->session->data['order_id']);
+			
+			$shipping = 0;
+			
+			foreach ($this->data['order_totals'] as $row)
+			{
+				if ($row['code'] == 'shipping')
+				{
+					$shipping = $row['value'];
+				}
+			}
+			
+			$this->data['shipping'] = $shipping;
+			
+			$tax = 0;
+			
+			foreach ($this->data['order_products'] as $row)
+			{
+				$tax = $tax + $row['tax'];
+			}
+			
+			$this->data['tax'] = $tax;
+        ]]>
+      </add>
+    </operation>
+  </file>
+  <file name="catalog/view/theme/*/template/common/success.tpl">
+    <operation error="skip">
+      <search position="before">
+        <![CDATA[
+<?php echo $footer; ?>
+        ]]>
+      </search>
+      <add>
+        <![CDATA[
+<?php if (isset($order_id) && $order_id) { ?>
+<!-- Google Analytics - Ecommerce Tracking (Universal Analytics) -->
+<script type="text/javascript">
+ga('require', 'ecommerce', 'ecommerce.js');
+
+ga('ecommerce:addTransaction', {
+   'id':          '<?php echo $order_id; ?>',
+   'affiliation': '<?php echo $order_info["store_name"]; ?>',
+   'revenue':     '<?php echo $order_info["total"]; ?>',
+   'shipping':    '<?php echo $shipping; ?>',
+   'tax':         '<?php echo $tax; ?>',
+   'currency':    '<?php echo $order_info["currency_code"]; ?>'
+});
+
+<?php foreach ($order_products as $row) { ?>
+ga('ecommerce:addItem', {
+   'id':       '<?php echo $order_id; ?>',
+   'name':     '<?php echo $row["name"]; ?>',
+   'sku':      '<?php echo $row["model"]; ?>',
+   'price':    '<?php echo $row["price"]; ?>',
+   'quantity': '<?php echo $row["quantity"]; ?>'
+});
+<?php } ?>
+
+ga('ecommerce:send');
+</script>
+<!-- End Google Analytics - Ecommerce Tracking (Universal Analytics) -->
+<?php } ?>
+        ]]>
+      </add>
+    </operation>
+  </file>
+</modification>

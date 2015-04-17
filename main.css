@@ -1,0 +1,40 @@
+.question {
+  padding: 50px 0 0;
+}
+.question__h2 {
+  margin-bottom: 90px;
+  font-size: 48px;
+  text-align: center;
+}
+
+.spoiler__item {
+  margin: 0 0 20px;
+  font-size: 14px;
+}
+.spoiler__title {
+  padding: 0 0 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.spoiler__link {
+  color: #2cacb3;
+  text-decoration: none;
+  border-bottom: 2px dotted #2cacb3;
+}
+.spoiler__link:hover {
+  color: #979797;
+  border-color: #979797;
+}
+.spoiler__link_active {
+  color: #000;
+  border-bottom: none;
+}
+.spoiler__link_active:hover {
+  color: #000;
+  border-color: #000;
+}
+.spoiler__body {
+  display: none;
+  padding: 20px 0;
+  color: #4c4c4c;
+}

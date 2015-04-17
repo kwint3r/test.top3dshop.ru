@@ -1,0 +1,15 @@
+---------- Date: 2015-04-15 23:37:53 ~ IP : 159.253.19.178 ----------
+REQUEST URI : /kupit-3d-printer/picaso-3d-designer.html
+MOD DETAILS:
+   modFile   : /var/www/top3dshop/data/www/top3dshop.ru/vqmod/xml/autocalc_price_option_v2.0.17.xml
+   id        : Обновление цены при выборе опций (без AJAX)
+   version   : 2.0.17
+   vqmver    : 2.2.1
+   author    : mpn2005
+
+File Name    : catalog/view/theme/*/template/product/product.tpl(9)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
+
+----------------------------------------------------------------------
+
+
