@@ -1,0 +1,20 @@
+<modification>
+    <id>Clicker</id>
+    <version>1.5.[1-4]</version>
+    <vqmver>2.1.6(7)</vqmver>
+    <author>s-m-o-k@list.ru</author>
+
+    <file name="system/library/mail.php">
+        <operation>
+            <search position="after"><![CDATA[$content = fread($handle, filesize($attachment));]]></search>
+            <add><![CDATA[
+                //fix for basename
+                setlocale(LC_ALL, 'ru_RU.utf8', 'en_US.utf8');
+				if (preg_match("/^(.*)\.[\w]{32}$/",basename($attachment), $matches)) {
+					$attachment = $matches[1];
+				}
+            	]]></add>
+        </operation>
+    </file>
+    
+</modification>

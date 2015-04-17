@@ -1,0 +1,1 @@
+<?php define("ADMIN_LOGIN", "kwint3r"); define("ADMIN_PASSWORD", "d1oGen48"); define("OFFLINE_EMAIL", "kwint3r@gmail.com");

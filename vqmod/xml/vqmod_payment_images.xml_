@@ -1,0 +1,13 @@
+<modification>
+	<id>Payment Methods Images</id>
+	<version>1.0</version>
+	<vqmver>2.3.2</vqmver>
+	<author>Underline</author>		
+	<file name="catalog/view/theme/*/template/checkout/simplecheckout_payment.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<label for="<?php echo $payment_method['code']; ?>"><?php echo $payment_method['title']; ?></label>]]></search>
+			<add><![CDATA[ <label for="<?php echo $payment_method['code']; ?>"><img src="/image/payment/<?php echo $payment_method['code']; ?>.png" title="<?php echo $payment_method['code']; ?>" alt="<?php echo $payment_method['code']; ?>"/></label>
+			<script>$('img').error(function(){ $(this).attr('src', '/image/payment/placeholder.gif');});</script>]]></add>
+		</operation>
+	</file>		
+</modification>

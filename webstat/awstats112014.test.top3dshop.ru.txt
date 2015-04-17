@@ -1,0 +1,589 @@
+AWSTATS DATA FILE 7.0 (build 1.971)
+# If you remove this file, all statistics for date 201411 will be lost/reset.
+# Last config file used to build this data file was /etc/awstats/awstats.test.top3dshop.ru.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 1997                
+POS_TIME 2683                
+POS_VISITOR 22231               
+POS_DAY 24278               
+POS_DOMAIN 3610                
+POS_LOGIN 3845                
+POS_ROBOT 4000                
+POS_WORMS 4396                
+POS_EMAILSENDER 4527                
+POS_EMAILRECEIVER 4670                
+POS_SESSION 24751               
+POS_SIDER 24958               
+POS_FILETYPES 4805                
+POS_DOWNLOADS 5076                
+POS_OS 5192                
+POS_BROWSER 5300                
+POS_SCREENSIZE 5557                
+POS_UNKNOWNREFERER 5631                
+POS_UNKNOWNREFERERBROWSER 5742                
+POS_ORIGIN 5848                
+POS_SEREFERRALS 5990                
+POS_PAGEREFS 6156                
+POS_SEARCHWORDS 6449                
+POS_KEYWORDS 6647                
+POS_MISC 2347                
+POS_ERRORS 6754                
+POS_CLUSTER 3701                
+POS_SIDER_404 6899                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20141125005709 1473 432183 15571263972657
+FirstTime 20141111221050
+LastTime 20141124235528
+LastUpdate 20141125000102 1473 0 1464 9 0
+TotalVisits 93                  
+TotalUnique 39                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 50                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 8 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 131 1500 36071117 55 141 2338369
+1 318 835 12543226 76 213 3277587
+2 234 302 2885760 50 119 3238932
+3 45 59 844314 42 110 2094937
+4 103 131 1236718 65 142 2129938
+5 0 0 0 47 80 1301642
+6 16 16 158639 54 103 1920965
+7 0 57 964950 25 63 1153374
+8 8 11 80591 33 71 870047
+9 20 80 516764 19 100 2178595
+10 17 478 11598666 137 243 4429198
+11 150 1055 19724051 186 307 4976223
+12 500 3917 15814765 104 305 7602383
+13 275 1716 25572954 118 223 4029704
+14 374 3977 14567063 148 294 5621336
+15 354 3653 26327714 182 330 4807034
+16 302 2786 11204303 86 284 6652685
+17 367 4508 58793603 49 179 3207087
+18 369 1071 8532010 96 250 4592867
+19 32 904 15369264 38 225 7826537
+20 49 671 14828007 44 147 3528055
+21 196 617 10203881 40 152 2792042
+22 335 1450 21477398 43 278 5763952
+23 82 1433 32632389 9 94 1657259
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 4277 31227 341948147
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 7
+yandex 3115 75353845 20141124232701 23
+googlebot 325 10607219 20141124232420 11
+favicon 35 301442 20141124121819 0
+seznambot 10 320036 20141118181701 3
+unknown 3 1422 20141117223821 3
+facebook 2 29342 20141122174701 0
+bot[\s_+:,\.\;\/\\-] 2 55383 20141121133104 1
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 10
+eot 3 56373 0 0
+css 4443 27949699 0 0
+png 9455 156670350 0 0
+woff 223 2208920 0 0
+php 3590 15499119 0 0
+html 461 9924719 0 0
+js 5796 63249173 0 0
+jpg 6780 65335144 0 0
+jpeg 13 102206 0 0
+gif 463 952444 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 2
+/robots.txt 41 0 21834
+/files/top3dshop_print_small.pdf 2 0 2526218
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS 6
+macosx 529
+winxp 16500
+Unknown 32
+linux 2554
+winvista 263
+win7 11349
+END_OS
+
+# Browser ID - Hits
+BEGIN_BROWSER 13
+msie8.0 49
+msie6.0 146
+iphone 4
+firefox33.0 3548
+mozilla 9
+chrome39.0.2171.65 1072
+msie7.0 1
+chrome38.0.2125.122 3007
+chrome38.0.2125.111 23046
+chrome36.0.1985.125 78
+Unknown 32
+firefox11.0 3
+opera9.80 232
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 1
+WebIndex 20141117223843
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 1
+WebIndex 20141117223843
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 282 323
+From1 0 0
+From2 6 7
+From3 7 10
+From4 3982 30887
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 2
+google 2 3
+yandex 4 4
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 4
+http://loginza.ru/api/redirect 5 5
+http://yandex.ua/clck/jsredir 2 2
+http://top3dshop.ru/news/review-mch/ 0 1
+http://top3dshop.ru/roundcube/ 0 2
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 1
+%d1%82%d0%b5%d1%81%d1%82+%d1%82%d0%be%d0%bf 2
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 2
+%d1%82%d0%be%d0%bf 2
+%d1%82%d0%b5%d1%81%d1%82 2
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 5
+302 103 52454
+206 12 185037
+500 3 36191
+301 245 152248
+404 589 884761
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 196
+/image/cache/data/products/materials/abs/usa/abs%20makerbot%20black-300x300.jpg 1 -
+/image/cache/data/products/printers/Cubify/CubeX%20Duo%20(3)-500x500.jpg 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%20860%20pro(1)-500x500.jpg 2 -
+/image/cache/data/products/printers/3D%20Systems/projet%203500%20hdmax%20(1)-500x500.jpg 2 -
+/image/cache/data/products/printers/Magnum/magnum%20creative%20pro%20(1)-500x500.jpg 3 -
+/image/cache/data/products/printers/3D%20Systems/projet%203510%20hdplus(1)-500x500.jpg 1 -
+/kupit-3d-printer/picaso-3d-designer.html 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%20660%20pro(3)-500x500.jpg 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%20460%20plus(5)-500x500.jpg 1 -
+/image/cache/data/products/scanners/3D%20Systems/Sense%20(4)-300x300.jpg 2 -
+/image/cache/data/products/printers/Leapfrog/leapfrog%20creatr%20xl%20(1)-500x500.jpg 1 -
+/image/cache/data/products/materials/abs/rec/abs%20rec%20orange(4)-500x500.jpg 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%203500%20hdmax%20(3)-500x500.jpg 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%203510%20sd(8)-100x100.jpg 2 -
+/image/cache/data/products/printers/Picaso/picaso%203d%20designer%20yellow%20(1)-835x200.jpg 1 -
+/image/payment/payonline-disabled.png 1 http://test.top3dshop.ru/index.php
+/image/cache/data/products/printers/Magnum/magnum%20creative%20(3)-500x500.jpg 1 -
+/image/data/articles/3d%20%0D%0Ascan/3dscan3.jpg 1 -
+/catalog/view/theme/vitalia/css/images/ui-bg_flat_75_ffffff_40x100.png 132 http://test.top3dshop.ru/catalog/view/theme/vitalia/css/jquery-ui.css
+/mjm.html 1 -
+/image/cache/data/products/materials/pla/usa/pla%20makerbot%20sparkly%20black-300x300.jpg 1 -
+/fdm.html 1 -
+/image/cache/data/products/printers/Picaso/Picaso%203D%20Designer%20(1)-73x73.jpg 2 -
+/image/cache/data/products/materials/pla/usa/pla%20makerbot%20red-300x300.jpg 1 -
+/image/cache/data/products/gajets/Myriwell/3d%20gadget%20pen%20myriwell%20(3)-500x500.jpg 2 -
+/first_blog/obzor-3d-printera-mch.html 1 -
+/image/cache/data/products/printers/Felix/felix%203.0%20single%20head%20(1)-500x500.jpg 1 -
+/image/cache/data/products/printers/Envisiontec/envisiontec%20ultra%203sp%20(2)-100x100.jpg 1 -
+/materiali/waste-tray-projet-4500.html 2 -
+/image/cache/data/products/printers/Ultimaker/Ultimaker%202%20(4)-500x500.jpg 1 -
+/image/cache/data/products/printers/UP%203D/UP%203D%20Plus%202%20(3)-500x500.jpg 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%203510%20hdplus(4)-500x500.jpg 1 -
+/cjp.html 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%20860%20pro(6)-500x500.jpg 1 -
+/download/1.php 2 -
+/image/cache/data/products/printers/Envisiontec/envisiontec%20ultra%203sp%20(4)-500x500.jpg 2 -
+/image/cache/data/products/materials/madesolid/ms%20resin%20(2)-500x500.jpg 2 -
+/image/cache/data/products/printers/3D%20Systems/projet%203510%20dp(1)-500x500.jpg 2 -
+/image/cache/data/products/printers/3D%20Systems/projet%20860%20pro(7)-500x500.jpg 1 -
+/image/cache/data/products/materials/madesolid/firecast%20resin%20(1)-500x500.jpg 1 -
+/image/cache/data/products/materials/madesolid/ms%20resin%20(4)-100x100.jpg 1 -
+/image/cache/data/products/printers/Cubify/Cubex%20Trio%20(4)-500x500.jpg 1 -
+/image/cache/data/products/printers/Cubify/CubeX%20Duo%20(1)-500x500.jpg 2 -
+/image/cache/data/products/printers/Picaso/Picaso%203D%20Designer%20(3)-500x500.jpg 2 -
+/image/cache/data/products/printers/Makerbot/Makerbot%20Replicator%20Mini%20(2)-500x500.jpg 1 -
+/image/cache/data/products/scanners/aicon/aicon%20moveinspect%20hr%20(3)-500x500.png 2 -
+/image/cache/data/products/printers/Envisiontec/envisiontec%20perfactory%20standard%20(1)-500x500.jpg 2 -
+/image/cache/data/products/printers/3D%20Systems/projet%201200%20(1)-500x500.jpg 1 -
+/image/cache/data/products/printers/Formlabs/Formlabs%20The%20Form%201%20(1)-500x500.jpg 2 -
+/image/cache/data/products/materials/ninjaflex/ninjaflex%20snow-500x500.jpg 1 -
+/image/cache/data/products/printers/Ultimaker/Ultimaker%202%20(2)-500x500.jpg 1 -
+/image/cache/data/products/printers/Picaso/Picaso%203D%20Designer%20(2)-500x500.jpg 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%203500%20cpxmax%20(1)-500x500.jpg 1 -
+/image/cache/data/products/materials/madesolid/firecast%20resin%20(2)-500x500.jpg 2 -
+/image/cache/data/products/printers/3D%20Systems/projet%20360%20(1)-500x500.jpg 1 -
+/image/cache/data/products/materials/ninjaflex/ninjaflex%20fire-500x500.jpg 1 -
+/download/Cat-zakaz.png.255f68cd7bc9229f48bf4acefc5f5838/0 3 -
+/image/cache/data/products/gajets/Myriwell/ruchka-dlya-3d-pechati-myriwell-penmaker-rev-a-500x500.jpg 1 -
+/image/cache/data/products/printers/Felix/felix%203.0%20double%20head%20(1)-500x500.jpg 3 -
+/image/cache/data/products/printers/Envisiontec/envisiontec%20ultra%203sp%20(3)-100x100.jpg 2 -
+/image/cache/data/products/printers/Formlabs/Formlabs%20The%20Form%201%20(3)-500x500.jpg 1 -
+/image/cache/data/products/printers/Makerbot/Makerbot%20Replicator%202%20(2)-500x500.jpg 2 -
+/image/cache/data/products/printers/3D%20Systems/projet%20460%20plus(1)-500x500.jpg 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%20660%20pro(7)-500x500.jpg 1 -
+/image/cache/data/products/gajets/Myriwell/3d%20gadget%20pen%20myriwell%20(4)-500x500.jpg 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%20460%20plus(7)-500x500.jpg 1 -
+/image/cache/data/products/printers/Envisiontec/envisiontec%20ultra%203sp%20(1)-500x500.jpg 1 -
+/image/cache/data/products/printers/Felix/felix%203.0%20single%20head%20(2)-100x100.jpg 1 -
+/image/cache/data/products/printers/Felix/felix%203.0%20single%20head%20(3)-100x100.jpg 2 -
+/download/1.jpg/0 1 -
+/image/cache/data/products/printers/Felix/felix%203.0%20single%20head%20(1)-100x100.jpg 2 -
+/image/cache/data/products/printers/3D%20Systems/projet%203510%20dp(3)-500x500.jpg 1 -
+/image/cache/data/products/materials/pla/usa/pla%20makerbot%20natural-500x500.jpg 1 -
+/image/cache/data/products/printers/Formlabs/Formlabs%20The%20Form%201%20(4)-500x500.jpg 1 -
+/image/cache/data/products/printers/Mch/Mch%20Midi%20(2)-500x500.jpg 3 -
+/image/cache/data/products/printers/Cubify/Cube%20(1)-226x226.jpg 1 -
+/image/cache/data/products/printers/Cubify/Cubex%20Trio%20(1)-226x226.jpg 2 -
+/materiali/ninjaflex-%20translucent.html 1 -
+/image/cache/data/articles/reviews/mch/MCH13-160x120.jpg 2 -
+/first_blog/3d-modelirovanie-s-pomoschju-programmy-modio.html 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%203510%20hd(6)-500x500.jpg 1 -
+/image/cache/data/products/printers/UP%203D/UP%203D%20Plus%202%20(1)-500x500.jpg 1 -
+/image/cache/data/products/printers/Cubify/CubeX%20Duo%20(2)-500x500.jpg 1 -
+/image/payment/nokupivkredit.png 3 http://test.top3dshop.ru/index.php
+/kupit-3d-gadjet/pen-myriwell.html 1 -
+/image/cache/data/products/materials/madesolid/firecast%20resin%20(2)-100x100.jpg 2 -
+/image/cache/data/products/printers/Makerbot/Makerbot%20Replicator%202X%20(1)-73x73.jpg 2 -
+/image/cache/data/products/materials/madesolid/ms%20resin%20(4)-500x500.jpg 1 -
+/image/data/articles/reviews/mch/mch2.jpg 1 -
+/image/cache/data/products/printers/Makerbot/Makerbot%20Replicator%20Mini%20(3)-500x500.jpg 1 -
+/image/cache/data/products/printers/Picaso/Picaso%203D%20Builder%20(3)-500x500.jpg 1 -
+/image/payment/nopayonline.png 14 http://test.top3dshop.ru/index.php
+/image/cache/data/products/printers/3D%20Systems/projet%20160%20(3)-500x500.jpg 3 -
+/image/cache/data/products/printers/Mch/Mch%20Midi%20(4)-500x500.jpg 1 -
+/download/ 1 -
+/kupit-3d-printer/projet-%203510hd.html 1 -
+/image/cache/data/products/printers/Makerbot/Makerbot%20Replicator%205GEN%20(1)-500x500.jpg 1 -
+/image/cache/data/products/gajets/Myriwell/3D%20Pen%20Myriwell%20blue%20(1)-300x300.jpg 1 -
+/robots.txt 1 -
+/image/cache/data/articles/reviews/makerbot/Makerbot%20(1)-160x120.jpg 1 -
+/image/data/articles/3d%20print/abs3 2 -
+/image/cache/data/products/gajets/Filabot/3d%20gadget%20filabot%20original%204-500x500.jpg 2 -
+/image/cache/data/products/printers/3D%20Systems/projet%207000%20hd(1)-500x500.jpg 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%20660%20pro(6)-500x500.jpg 3 -
+/download/Cat-zakaz.png 2 -
+/image/cache/data/products/printers/Makerbot/Makerbot%20Replicator%20Z18%20(1)-500x500.jpg 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%207000%20hd(2)-500x500.jpg 1 -
+/image/data/Yandex-Money.png 1 -
+/image/cache/data/products/materials/abs/rec/abs%20rec%20orange(2)-500x500.jpg 1 -
+/sls.html 6 -
+/image/cache/data/products/printers/Picaso/Picaso%203D%20Designer%20(4)-500x500.jpg 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%20260%20c(5)-500x500.jpg 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%203510%20dp(2)-100x100.jpg 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%20260%20c(4)-500x500.jpg 1 -
+/image/cache/data/products/scanners/surphaser/surphaser%2050hsx%20(2)-500x500.jpg 1 -
+/materiali/pla-makerbot-warm-grey.html 3 -
+/image/cache/data/products/materials/madesolid/ms%20resin%20(1)-500x500.jpg 3 -
+/image/cache/data/products/printers/3D%20Systems/projet%20260%20c(3)-500x500.jpg 2 -
+/image/cache/data/products/printers/3D%20Systems/projet%203510%20hd(7)-500x500.jpg 2 -
+/image/cache/data/products/printers/3D%20Systems/projet%203500%20cpxmax%20(2)-500x500.jpg 2 -
+/image/cache/data/products/materials/madesolid/ms%20resin%20(3)-500x500.jpg 3 -
+/image/cache/data/articles/reviews/modio/Modio1-160x120.jpg 4 -
+/image/cache/data/products/printers/3D%20Systems/projet%20660%20pro(1)-500x500.jpg 1 -
+/image/cache/data/products/printers/Picaso/picaso%203d%20designer%20yellow%20(1)-60x60.jpg 2 -
+/image/cache/data/products/printers/3D%20Systems/projet%201200%20(3)-500x500.jpg 2 -
+/image/cache/data/products/printers/Picaso/picaso%203d%20designer%20(3)-500x500.jpg 1 -
+/kupit-3d-printer/replicator-2x.html 1 -
+/admin/view/image/loading.gif 4 http://test.top3dshop.ru/ghbynth/index.php
+/image/cache/data/products/printers/Picaso/picaso%203d%20designer%20(2)-100x100.jpg 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%20260%20c(5)-100x100.jpg 1 -
+/first_blog/ 1 -
+/image/cache/data/products/printers/Makerbot/Makerbot%20Replicator%202X%20(1)-500x500.jpg 2 -
+/image/cache/data/products/printers/Makerbot/Makerbot%20Replicator%20Z18%20(4)-500x500.jpg 1 -
+/image/cache/data/products/printers/Makerbot/Makerbot%20Replicator%20Mini%20(3)-100x100.jpg 1 -
+/image/cache/data/products/printers/Picaso/picaso%203d%20designer%20black%20(1)-500x500.jpg 2 -
+/image/cache/data/products/scanners/aicon/aicon%20moveinspect%20hr%20(1)-500x500.jpg 1 -
+/3dp.html 1 -
+/image/cache/data/products/gajets/Filabot/3d%20gadget%20filabot%20original%203-500x500.jpg 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%20360%20(6)-500x500.jpg 1 -
+/kupit-3d-printer/witbox.html 1 -
+/download/Cat-zakaz.png.255f68cd7bc9229f48bf4acefc5f5838//0 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%203510%20hdplus(2)-500x500.jpg 1 -
+/image/cache/data/products/printers/UP%203D/UP%203D%20Plus%202%20(4)-500x500.jpg 1 -
+/materiali/nabor-3d-ruchek.html 1 -
+/catalog/view/theme/vitalia/stylesheet/simple.css 29 http://test.top3dshop.ru/index.php
+/image/cache/data/products/printers/Makerbot/Makerbot%20Replicator%20Mini%20(4)-500x500.jpg 2 -
+/kupit-3d-printer/projet-260c.html 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%203510%20cpxplus(5)-500x500.jpg 2 -
+/materiali/waste-tray.html 2 -
+/image/cache/data/products/printers/Makerbot/Makerbot%20Replicator%202X%20(3)-500x500.jpg 1 -
+/materiali/fotopolimernaya-smola/fotopolimernaya-smola-3dinc.html 2 -
+/image/cache/data/products/printers/Mch/Mch%20Midi%20(3)-500x500.jpg 1 -
+/image/data/articles/3d%20%0D%0Aprint/pla1mini.jpg 3 -
+/image/cache/data/products/materials/madesolid/ms%20resin%20(2)-100x100.jpg 1 -
+/image/cache/data/products/scanners/3D%20Systems/Sense%20(2)-500x500.jpg 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%203510%20hd(5)-500x500.jpg 1 -
+/image/cache/data/products/materials/abs/usa/abs%20rec%20yellow-300x300.jpg 1 -
+/image/cache/data/products/printers/Mankati/Mankati%20FullScale%20XT%20(2)-500x500.jpg 2 -
+/dmls.html 1 -
+/image/cache/data/products/materials/pla/usa/pla%20makerbot%20army%20green-500x500.jpg 2 -
+/slm.html 1 -
+/image/cache/data/products/gajets/Filabot/3d%20gadget%20filabot%20original%202-500x500.jpg 2 -
+/image/cache/data/products/printers/Picaso/picaso%203d%20designer%20(3)-100x100.jpg 1 -
+/image/cache/data/products/scanners/3D%20Systems/Sense%20(3)-500x500.jpg 2 -
+/image/cache/data/products/printers/Mch/Mch%20Uni%20(1)-500x500.jpg 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%20460%20plus(6)-500x500.jpg 1 -
+/image/cache/data/products/materials/abs/china/china%20abs%20makerbot%20orange-500x500.jpg 1 -
+/image/cache/data/products/materials/abs/usa/abs-cubex-neon-green-500x500.png 1 -
+/image/cache/data/products/printers/Makerbot/Makerbot%20Replicator%202X%20(4)-500x500.jpg 1 -
+/catalog/view/theme/vitalia/css/images/ui-bg_glass_75_e6e6e6_1x400.png 132 http://test.top3dshop.ru/catalog/view/theme/vitalia/css/jquery-ui.css
+/image/cache/data/products/printers/3D%20Systems/projet%203510%20cpxplus(1)-500x500.jpg 1 -
+/image/cache/data/products/materials/abs/usa/abs-cubex-glowing-green-neon-500x500.png 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%20260%20c(1)-500x500.jpg 1 -
+/image/cache/data/products/printers/3D%20Systems/projet%20360%20(5)-500x500.jpg 1 -
+/image/cache/data/products/printers/Picaso/picaso%203d%20designer%20(4)-500x500.jpg 1 -
+/image/cache/data/products/gajets/3dyaya/3dyaya%20(3)-500x500.jpg 1 -
+/image/cache/data/products/gajets/Filabot/3d%20gadget%20filabot%20original%201-500x500.jpg 1 -
+/image/cache/data/products/printers/Leapfrog/leapfrog%20creatr%20xl%20(3)-500x500.jpg 2 -
+/image/cache/data/products/printers/3D%20Systems/projet%20360%20(7)-500x500.jpg 2 -
+/admin 5 -
+/image/cache/data/products/printers/Envisiontec/envisiontec%20ultra%203sp%20(4)-100x100.jpg 2 -
+/image/cache/data/products/printers/Picaso/picaso%203d%20designer%20yellow%20(1)-500x500.jpg 3 -
+/image/cache/data/products/printers/Magnum/magnum%20creative%20(4)-500x500.jpg 1 -
+/false 1 http://test.top3dshop.ru/index.php
+/download/Cat-zakaz.png.255f68cd7bc9229f48bf4acefc5f5838 4 -
+/image/cache/data/products/printers/Picaso/picaso%203d%20designer%20(4)-100x100.jpg 1 -
+/news.html 1 -
+/image/cache/data/products/materials/madesolid/ms%20resin%20(3)-100x100.jpg 1 -
+/index.php 1 http://test.top3dshop.ru/index.php
+/image/cache/data/products/materials/pla/china/pla%20makerbot%20yellow-300x300.jpg 2 -
+/image/cache/data/products/materials/abs/usa/abs%20rec%20red-300x300.jpg 1 -
+/3dfigurki.html 1 -
+/image/cache/data/products/printers/Wanhao/wanhao%20duplicator%20(2)-500x500.jpg 1 -
+/image/cache/data/products/printers/Cubify/Cubex%20Trio%20(2)-500x500.jpg 1 -
+/image/cache/data/products/printers/UP%203D/UP%203D%20Plus%202%20(3)-100x100.jpg 1 -
+/image/cache/data/products/printers/UP%203D/UP%203D%20Plus%202%20(2)-500x500.jpg 2 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 50
+84.39.244.184 1437 13315 41913193 20141113194406
+84.39.244.212 875 1364 12799805 20141115155357
+194.0.68.100 511 5788 85981279 20141124125635
+77.123.91.68 270 2260 42515776 20141121154456
+84.39.247.232 239 1402 12256468 20141119134302
+178.234.188.5 159 712 8813039 20141119223122
+178.234.180.124 122 493 9832598 20141124235528
+178.234.181.16 73 449 8824645 20141116150221
+109.167.211.57 72 526 14814546 20141118165634
+31.23.167.189 62 302 7183144 20141117150624
+194.158.203.82 0 1 26863 
+46.219.28.41 3 3 91313 20141120220009
+5.18.76.231 0 1 63536 
+5.139.114.237 16 79 163667 20141120091621
+188.230.122.30 15 105 2351161 20141124184506
+178.234.182.87 45 792 20003023 20141114210839
+107.178.200.3 0 1 54809 
+178.234.181.208 9 170 3264829 20141117223853
+178.250.91.82 0 1 63536 
+178.234.180.125 58 640 7110570 20141111225029
+5.139.117.242 8 18 81880 20141124223315
+66.249.81.153 0 1 63536 
+31.23.152.11 8 18 114431 20141118151631
+85.249.7.147 6 78 2182388 20141117095946
+84.237.1.97 6 77 2162991 20141118141233
+109.74.130.214 6 78 2182248 20141120103842
+92.242.35.54 32 32 216086 20141117223843
+31.23.136.155 12 20 122788 20141121063307
+92.231.219.215 7 92 2344524 20141118203240
+93.80.215.189 1 43 1226400 20141120094857
+178.234.158.170 0 198 6598305 
+178.234.182.92 9 335 8734024 20141123002856
+31.23.216.205 12 142 2628312 20141124123246
+31.23.202.242 6 16 67444 20141123091453
+80.79.246.76 0 1 63536 
+178.234.180.152 6 29 631387 20141121195722
+31.23.209.166 8 71 83532 20141122083327
+95.220.134.84 5 49 1590790 20141119095524
+31.23.214.160 3 82 1912080 20141116111537
+78.25.120.135 0 1 63536 
+109.122.62.208 1 1 25111 20141115141530
+66.249.81.150 0 1 63536 
+31.23.229.26 20 25 204659 20141118231650
+5.139.117.247 4 147 3893965 20141115011452
+95.220.107.168 3 146 2921343 20141118190235
+178.234.179.80 43 595 12485355 20141113004621
+178.234.188.142 58 304 9584314 20141114233402
+84.39.246.173 47 221 1444774 20141119183721
+78.25.122.224 0 1 63536 
+66.249.81.147 0 1 63536 
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 15
+20141111 83 665 7215287 2
+20141112 822 8431 39051014 8
+20141113 974 8976 57892338 4
+20141114 192 2046 50296919 8
+20141115 880 1512 16718881 5
+20141116 126 711 15761359 4
+20141117 73 1058 19301264 11
+20141118 154 1456 35099166 13
+20141119 648 3361 36782198 13
+20141120 92 725 15060908 7
+20141121 44 931 21255491 4
+20141122 10 208 3676506 3
+20141123 17 299 7226363 4
+20141124 162 839 14800536 7
+20141125 0 9 1809917 0
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+1h+ 8
+5mn-15mn 9
+30s-2mn 8
+15mn-30mn 7
+2mn-5mn 1
+0s-30s 49
+30mn-1h 11
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 49
+/index.php 1403 9760022 5 42
+/ghbynth/index.php 828 2966632 1 13
+/catalog/view/theme/vitalia/css/custom_color.css.php 688 1190240 2 3
+/inwidget/index.php 671 1582225 0 27
+/catalog/view/theme/vitalia/fontawesome/fontawesome-webfont.woff 222 2192200 0 1
+/ 192 3664922 49 3
+/kupit-3d-printer/personal/ 53 1927106 1 0
+/search/ 52 722014 0 0
+/kupit-3d-printer/ 35 1567009 0 1
+/ghbynth/ 31 86771 3 0
+/catalog/view/javascript/wysibb/theme/fonts/wysibbiconfont-wb.eot 1 4333 0 0
+/kupit-3d-printer/hp_multi_jet_fusion.html 2 29858 0 0
+/kupit-3d-gadjet/3d-space-sm-60-72.html 1 16147 0 0
+/kupit-3d-printer/picaso-3d-designer-yellow.html 2 35601 0 0
+/franchise-my3dgift.html 1 13960 0 0
+/kupit-3d-printer/makerbot-replicator-5-gen.html 2 32198 0 0
+/contacts.html 3 35278 0 0
+/kupit-3d-gadjet/filabot-original.html 1 16105 1 0
+/kupit-3d-printer/education/ 1 25111 1 1
+/catalog/view/theme/vitalia/fonts/glyphicons-halflings-regular.woff 1 16720 0 0
+/kupit-3d-printer/prof/ 2 63636 0 0
+/materiali/visijet-m5-mx-plastic-2kg.html 2 30549 2 0
+/kupit-3d-skaner/professionalnie/ 1 23751 0 0
+/materiali/photosilver-rcp130.html 1 15206 0 0
+/catalog/view/theme/vitalia/fonts/glyphicons-halflings-regular.eot 1 14357 0 0
+/kupit-3d-skaner/coordinates-systems/ 1 17548 0 1
+/materiali/materials-prof/ 30 704909 26 0
+/kupit-3d-printer/uvelirnoe-delo/ 1 25863 0 0
+/kupit-3d-gadjet/aksessuari/ 2 33769 0 0
+/kupit-3d-printer/makerbot-replicator-z18.html 1 19037 1 0
+/kupit-3d-gadjet/3d-mouse/ 1 14641 0 0
+/leasing.html 3 38834 0 0
+/materiali/exotic/ 2 38890 0 0
+/soft/ 1 17844 0 0
+/news/reviews/ 1 14158 0 0
+/kupit-3d-skaner/sense.html 1 20125 0 0
+/materiali/nylon.html 1 15223 0 0
+/shopping-cart/ 2 21622 0 0
+/materiali/clear-guide-e-shell-600.html 1 15415 0 0
+/login/ 5 58432 0 1
+/kupit-3d-printer/picaso-3d-designer-white.html 2 35518 0 0
+/catalog/view/theme/vitalia/fontawesome/fontawesome-webfont.eot 1 37683 0 0
+/materiali/visijet-cr-wt-white-2kg.html 1 14993 0 0
+/news/ 5 66093 0 0
+/kupit-3d-gadjet/turntables/ 2 31623 1 0
+/kupit-3d-skaner/ 11 322305 0 0
+/materiali/pom.html 1 14798 0 0
+/kupit-3d-skaner/artec-eva.html 3 62198 0 0
+/kupit-3d-skaner/personalnie/ 1 15659 0 0
+END_SIDER
