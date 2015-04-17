@@ -37,7 +37,7 @@ style="font-size:16px;text-align:center;"> или задайте с помощь
     <?php $timestamp = time();?>
     var lastFile = 0;
     $(document).ready(function() {
-        $('#feedback-form').submit(function(event){
+        $("#feedback-form").unbind('submit').bind('submit', function(){
             event.preventDefault();
             $.post( "/simple_mail.php", $( "#feedback-form" ).serialize(), function( data ) {
                 ga('send', 'event', '/virtual/feedback-form'); 

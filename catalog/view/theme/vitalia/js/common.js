@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#feedback-form").submit(function(){
+    $("#feedback-form").unbind('submit').bind('submit', function(){
         $.ajax({
             url: $(this).attr('action'),
             type: "POST",
