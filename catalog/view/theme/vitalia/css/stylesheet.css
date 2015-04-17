@@ -3745,5 +3745,12 @@ font-size:16px !important;
 }
 #feedback-form label,
 #vacancy-form label {
+<<<<<<< HEAD
   margin-top: 20px;
 }
+=======
+  /*margin-top: 20px;*/
+  /*margin-top:20px;*/
+  margin-top:20px;
+}
+>>>>>>> 4d34ecd54897e32fb4eaaeca671436f08e0d5666

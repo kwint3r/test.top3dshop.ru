@@ -518,3 +518,4 @@ catalog/view/theme/vitalia/template/product/product.tpl
 ghbynth/controller/catalog/article.php
 ghbynth/language/russian/catalog/article.php
 ghbynth/view/template/catalog/article_list.tpl
+ghbynth/language/english/module/vqmod_manager.php
