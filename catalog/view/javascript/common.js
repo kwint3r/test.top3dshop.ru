@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     $("#feedback-form").unbind('submit').bind('submit', function(){
-        $.ajax({
+        $.ajax({  
             url: $(this).attr('action'),
             type: "POST",
             dataType: "JSON",
