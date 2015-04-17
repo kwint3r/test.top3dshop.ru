@@ -3,6 +3,9 @@
 config.php
 ghbynth/config.php
 
+# Webstat
+webstat/*
+
 # System Cache Files
 system/cache/*
 !system/cache/index.html
