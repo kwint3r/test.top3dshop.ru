@@ -37,7 +37,39 @@ style="font-size:16px;text-align:center;"> или задайте с помощь
     <?php $timestamp = time();?>
     var lastFile = 0;
     $(document).ready(function() {
-        $("#feedback-form").unbind('submit').bind('submit', function(){
+
+    $("#feedback-form").unbind('submit').bind('submit', function(){
+        $.ajax({
+            url: $(this).attr('action'),
+            type: "POST",
+            dataType: "JSON",
+            data: $(this).serialize(),
+            success: function(data){
+                if (data.success){
+                    alert(data.output);
+                    ga('send', 'event', '/virtual/feedback-form'); 
+                    yaCounter26190288.reachGoal('feedback-form');
+                    //$("#feedback-form").html(data.output);
+                }else{
+                    //$("#feedback-form .feedback-error").html(data.output);
+                    $("#feedback-form .g_recaptcha > div > div")
+                        .css("border","2px solid red")
+                        .css("margin-top","84px")
+                        .css("height","80px")
+                        .css("width","306px");
+                }
+            },
+            error: function(data){
+                ga('send', 'event', '/virtual/feedback-form'); 
+                yaCounter26190288.reachGoal('feedback-form');
+                alert(data.responseText);
+            }
+        });
+        return false;
+    });
+
+
+/*        $("#feedback-form").unbind('submit').bind('submit', function(){
             event.preventDefault();
             $.post( "/simple_mail.php", $( "#feedback-form" ).serialize(), function( data ) {
                 ga('send', 'event', '/virtual/feedback-form'); 
@@ -45,7 +77,7 @@ style="font-size:16px;text-align:center;"> или задайте с помощь
             });
 
         })
-
+*/
         $('#fileFF').uploadify({
             'formData'     : {
                 'timestamp' : '<?php echo $timestamp;?>',
