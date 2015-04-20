@@ -228,20 +228,28 @@ function addToCart(product_id, quantity, img) {
 				location = json['redirect'];
 			}
 			if (json['success']) {
-                            var pixels_per_second = 100;
-                            distance = Math.abs($(document.body).scrollTop( ) - $('#'+img).offset( ).top);
-                            scroll_duration = (distance / pixels_per_second) * 1000;
-                            scroll_duration = $('#'+img).offset( ).top+$('#'+img).offset( ).top*0.2;
+                var pixels_per_second = 50;
+                distance = Math.abs($(document.body).scrollTop( ) - $('#'+img).offset( ).top);
+                scroll_duration = (distance / pixels_per_second) * 1000;
+                scroll_duration = $('#'+img).offset( ).top+$('#'+img).offset( ).top*0.2;
+				$('html, body').animate({
+				        scrollTop: $("#"+product_id).offset().top
+				    }, 500);
+				setTimeout(function(){ }, 500);
 				$('#'+img)
 				  .clone()
-				  .css({'position' : 'absolute', 'z-index' : '11100', top: $('#'+img).offset().top-300, left:$('#'+img).offset().left-100, width:150, height:150})
+				  .css({'position' : 'absolute', 'z-index' : '11100', 
+				  	top: $('#'+img).offset().top+300, 
+				  	left:$('#'+img).offset().left, 
+				  	width:150, height:150})
 				  .appendTo("body")
 				  .animate({opacity: 0.05,
 					left: $("#cart_block").offset()['left'],
 					top: $("#cart_block").offset()['top'],
 					width: 20}, scroll_duration, function() {
 					$(this).remove();
-				});
+				});				
+
 				/*$.colorbox({
 					html: '<div class="clearfix" style="padding: 15px 30px 15px 30px">' + json['success'] + '<div class="success-checkout"><a href="' + checkout_url + '">' + checkout_text + '</a></div> <div class="success-or">или</div> <div class="success-continue"><a href="#" onclick="$.colorbox.close();">' + continue_shopping_text + '</a></div>',
 					fastIframe:false,
@@ -337,20 +345,27 @@ function addToVkredit(product_id, quantity, img) {
 			}
 			if (json['success']) {
 				
-				            var pixels_per_second = 100;
-                            distance = Math.abs($(document.body).scrollTop( ) - $('#'+img).offset( ).top);
-                            scroll_duration = (distance / pixels_per_second) * 1000;
-                            scroll_duration = $('#'+img).offset( ).top+$('#'+img).offset( ).top*0.2;
+                var pixels_per_second = 50;
+                distance = Math.abs($(document.body).scrollTop( ) - $('#'+img).offset( ).top);
+                scroll_duration = (distance / pixels_per_second) * 1000;
+                scroll_duration = $('#'+img).offset( ).top+$('#'+img).offset( ).top*0.2;
+				$('html, body').animate({
+				        scrollTop: $("#"+product_id).offset().top
+				    }, 500);
+				setTimeout(function(){ }, 500);
 				$('#'+img)
 				  .clone()
-				  .css({'position' : 'absolute', 'z-index' : '11100', top: $('#'+img).offset().top-300, left:$('#'+img).offset().left-100, width:150, height:150})
+				  .css({'position' : 'absolute', 'z-index' : '11100', 
+				  	top: $('#'+img).offset().top+300, 
+				  	left:$('#'+img).offset().left, 
+				  	width:150, height:150})
 				  .appendTo("body")
 				  .animate({opacity: 0.05,
 					left: $("#cart_block").offset()['left'],
 					top: $("#cart_block").offset()['top'],
 					width: 20}, scroll_duration, function() {
 					$(this).remove();
-				});
+				});				
 
 
 				/*$.colorbox({
