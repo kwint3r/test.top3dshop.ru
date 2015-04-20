@@ -9,6 +9,7 @@ webstat/*
 # System Cache Files
 system/cache/*
 !system/cache/index.html
+system/license/*
 
 # Image File
 !image/no_image.jpg
