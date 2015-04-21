@@ -16,15 +16,24 @@
 					<ul>
 						<? $i = 1; ?>
 						<?php 
-						foreach ($breadcrumbs as $breadcrumb) {
-							if($i == count($breadcrumbs)){
-								?><li><?php echo $breadcrumb['text']; ?></li><?
+						if ($_SERVER['REQUEST_URI'] == '/kupit-3d-printer/autoprom/') { 
+							foreach ($breadcrumbs as $breadcrumb) { ?>
+								<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+							<?php $i++;	}
+						?>							
+						<li><?php echo "Автопром";?></li>							
+						<?php 
+						} else {
+							foreach ($breadcrumbs as $breadcrumb) {
+								if($i == count($breadcrumbs)){
+									?><li><?php echo $breadcrumb['text']; ?></li><?
+								}
+								else{
+									?><li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li><?
+								}
+								$i++;
 							}
-							else{
-								?><li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li><?
-							}
-							$i++;
-						} 
+						}
 						?>
 					</ul>
 					<?/* <h2 id="title-page"><?php echo $heading_title; ?>

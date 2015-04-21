@@ -847,10 +847,36 @@ width: 90px;
 		text-align: right;
 	}
 
+/* Custom styles */
 #pluss, #minuss {
 	cursor: pointer;
 }
-		
+
+.category-video-bottom {
+
+}
+ul.category-video-bottom li {
+	display: inline-block;
+	width: 33%;
+}
+ul.category-video-bottom li iframe {
+	width: 100%;
+	height: 200px;
+}
+
+#filterpro_box .static_spec_filter a, #filterpro_box .static_spec_filter a:visited {
+  color: #000;
+}
+
+#filterpro_box .static_spec_filter a:hover {
+  color: #4acac1;
+}		
+.category-header {
+	font: 14px Arial;
+  	font-weight: bold;
+  	text-align: center;
+}
+
 /* Breadcrumb
 ------------------*/
 

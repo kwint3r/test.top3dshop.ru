@@ -101,42 +101,7 @@ if (isset ($_POST['contactFF'])) {
         $filetype = $info->file($file_up);
 
 
-        $boundary = "----=_NextPart_" . md5(time());
-
-        $headers = "";
-        
-        $headers .= "MIME-Version: 1.0" . "\n";
-        $headers .= "Date: " . date('D, d M Y H:i:s O') . "\n";
-        $headers .= "Message-ID: <" . sha1(microtime(true)) . "." . $from . ">\n";
-        $headers .= "From: " . "" . base64_encode($sender) . "" . " <" . $from . ">" . "\n";
-        $headers .= "Reply-To: " . "" . base64_encode($sender) . "" . " <" . $from . ">" . "\n";
-        $headers .= "Return-Path: " . $from . "\n";
-        $headers .= "X-Mailer: PHP/" . phpversion() . "\n";
-        $headers .= "Content-Type: multipart/related; boundary=\"" . $boundary . "\"" . "\n" . "\n";
-
-        $message = "
---_1_$boundary
-Content-Type: multipart/alternative; boundary=\"_2_$boundary\"
-
---_2_$boundary
-Content-Type: text/plain; charset=\"utf-8\"
-Content-Transfer-Encoding: 7bit
-
-$message
-
---_2_$boundary--
---_1_$boundary
-Content-Type: \"$filetype\"; name=\"$filename\"
-Content-Transfer-Encoding: base64
-Content-Disposition: attachment
-
-$attachment
---_1_$boundary--";
-
-
-
-    } else {
-        $boundary = "----=_NextPart_" . md5(time());
+        $boundary = md5(date('r', time()));
 
         $headers = "";
         
@@ -148,13 +113,58 @@ $attachment
         $headers .= "Return-Path: " . $from . "\n";
         $headers .= "X-Spam:  Not detected\n";
         $headers .= "X-Mailer: PHP/" . phpversion() . "\n";
-        $headers .= "Content-Type: text/plain; boundary=\"" . $boundary . "\"\n\n";
+        $headers .= "Content-Type: multipart/mixed; boundary=\"PHP-mixed-".$boundary."\"\n";
+    ob_start();
+ echo "
+--PHP-mixed-$boundary
+Content-Type: multipart/alternative; boundary=\"PHP-alt-$boundary\"
 
-//        $message = "Content-Type: text/plain; charset=\"utf-8\"\nContent-Transfer-Encoding: 8bit\n$message";
-    }	
+--PHP-alt-$boundary
+Content-Type: text/plain; charset=\"utf-8\"
+Content-Transfer-Encoding: 7bit
+
+$message
+
+--PHP-alt-$boundary--
+
+--PHP-mixed-$boundary
+Content-Type: $filetype; name=\"$filename\" 
+Content-Transfer-Encoding: base64 
+Content-Disposition: attachment 
+
+$attachment
+--PHP-mixed-$boundary--
+";
+$message = ob_get_clean();
+//$fh=fopen('log.txt','w');
+//fwrite($fh,$message);
+
+
+
+/*
+        $message = "
+--_1_$boundary
+Content-Type: multipart/alternative; boundary=\"_2_$boundary\"
+
+--_2_$boundary
+Content-Type: text/plain; charset=\"utf-8\"
+Content-Transfer-Encoding: 7bit
+
+$message
+
+--_2_$boundary--
+
+--_1_$boundary
+Content-Type: \"$filetype\"; name=\"$filename\"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename=\"$filename\"
+
+$attachment
+--_1_$boundary--";
+*/
 
     // DKIM signing section
-    $message = preg_replace('/(?<!\r)\n/', "\r\n", $message);
+//    $message = preg_replace('/(?<!\r)\n/', "\r\n", $message);
     $headers = preg_replace('/(?<!\r)\n/', "\r\n", $headers);
     /*require_once './scripts/mail-signature.class.php';
     require_once './scripts/mail-signature.config.php';
@@ -179,6 +189,52 @@ $attachment
     }else{
         $output = "Письмо не отправлено. Ошибка: " . $result;
     }
+
+
+    } else {
+        $boundary = "----=_NextPart_" . md5(time());
+
+        $headers = "";
+        
+        $headers .= "MIME-Version: 1.0\n";
+        $headers .= "Date: " . date('D, d M Y H:i:s O') . "\n";
+        $headers .= "Message-ID: <" . sha1(microtime(true)) . "." . $from . ">\n";
+        $headers .= "From: " . "" . $sender . "" . " <" . $from . ">\n";
+        $headers .= "Reply-To: " . "" . $sender . "" . " <" . $from . ">\n";
+        $headers .= "Return-Path: " . $from . "\n";
+        $headers .= "X-Spam:  Not detected\n";
+        $headers .= "X-Mailer: PHP/" . phpversion() . "\n";
+        $headers .= "Content-Type: text/plain; boundary=\"" . $boundary . "\"\n\n";
+
+//        $message = "Content-Type: text/plain; charset=\"utf-8\"\nContent-Transfer-Encoding: 8bit\n$message";
+        // DKIM signing section
+        $message = preg_replace('/(?<!\r)\n/', "\r\n", $message);
+        $headers = preg_replace('/(?<!\r)\n/', "\r\n", $headers);
+        /*require_once './scripts/mail-signature.class.php';
+        require_once './scripts/mail-signature.config.php';
+        $signature = new mail_signature(
+            MAIL_RSA_PRIV,
+            MAIL_RSA_PASSPHRASE,
+            MAIL_DOMAIN,
+            MAIL_SELECTOR
+        );
+        $signed_headers = $signature -> get_signed_headers($to, $subject, $message, $headers);
+    */
+        // пример использования
+        require_once "./scripts/SendMailSmtpClass.php"; // подключаем класс
+          
+        $mailSMTP = new SendMailSmtpClass('noreply@top3dshop.ru', 'no2015', 'ssl://smtp.yandex.ru', 'Top3dShop', 465);
+        // $mailSMTP = new SendMailSmtpClass('логин', 'пароль', 'хост', 'имя отправителя');
+          
+        $result =  $mailSMTP->send($to, $subject, $message, $headers); // отправляем письмо
+        // $result =  $mailSMTP->send('Кому письмо', 'Тема письма', 'Текст письма', 'Заголовки письма');
+        if($result === true){
+            $output = "Ваше сообщение получено, спасибо!";
+        }else{
+            $output = "Письмо не отправлено. Ошибка: " . $result;
+        }
+    }	
+
 
     //mail($to, '=?UTF-8?B?'.base64_encode($subject).'?=', $message, $signed_headers.$headers, "-fnoreply@top3dshop.ru");    
 //    require_once './scripts/smtpmail.php';

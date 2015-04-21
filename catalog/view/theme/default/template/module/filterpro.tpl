@@ -63,8 +63,59 @@
 </div>
 
 
-<!-- Перенос фильтра специализация под цену -->
-	<?php if($attributes) { ?>
+<!-- Перенос фильтра специализация под цену Отключен, Статичные ссылки-->
+<div class="attribute_box option_box static_spec_filter">
+	<div class="option_name ">
+		Специализация											
+	</div>
+	<div class="collapsible">
+	<table>
+		<tbody>
+			<tr>
+				<td>
+					<a href="/kupit-3d-printer/autoprom/" title="Автопром">Автопром</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/kupit-3d-printer/animaciya/" title="Анимация и развлечения">Анимация и развлечения</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/kupit-3d-printer/architecture/" title="Архитектура и искусство">Архитектура и искусство</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/kupit-3d-printer/education/" title="Образование">Образование</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/kupit-3d-printer/stomatology/" title="Стоматология">Стоматология</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/kupit-3d-printer/suvenirnaya-produkciya/" title="Сувенирная продукция">Сувенирная продукция</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/kupit-3d-printer/upakovka/" title="Упаковка и потребительские товары	">Упаковка и потребительские товары</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/kupit-3d-printer/uvelirnoe-delo/" title="Ювелирное дело">Ювелирное дело</a>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+	<?php if (false){//if($attributes) { ?>
 		<?php foreach($attributes as $attribute_group_id => $attribute) { ?>
 			<?php if($attr_group) { ?>
 				<div class="option_box">
