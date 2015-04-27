@@ -78,37 +78,67 @@
 			</tr>
 			<tr>
 				<td>
-					<a href="/kupit-3d-printer/animaciya/" title="Анимация и развлечения">Анимация и развлечения</a>
+					<a href="/kupit-3d-printer/architecture/" title="Архитектура">Архитектура</a>
 				</td>
 			</tr>
-			<tr>
+				<tr>
 				<td>
-					<a href="/kupit-3d-printer/architecture/" title="Архитектура и искусство">Архитектура и искусство</a>
+					<a href="/kupit-3d-printer/aerospace/" title="Аэрокосмическая">Аэрокосмическая</a>
 				</td>
 			</tr>
-			<tr>
+				<tr>
+				<td>
+					<a href="/kupit-3d-printer/design/" title="Дизайн">Дизайн</a>
+				</td>
+			</tr>
+				<tr>
+				<td>
+					<a href="/kupit-3d-printer/breadboarding/" title="Макетирование">Макетирование</a>
+				</td>
+			</tr>
+				<tr>
+				<td>
+					<a href="/kupit-3d-printer/medicine/" title="Медицина">Медицина</a>
+				</td>
+			</tr>
+				<tr>
+				<td>
+					<a href="/kupit-3d-printer/military/" title="Оборонная промышленность">Оборонная промышленность</a>
+				</td>
+			</tr>
+				<tr>
 				<td>
 					<a href="/kupit-3d-printer/education/" title="Образование">Образование</a>
 				</td>
 			</tr>
-			<tr>
+				<tr>
+				<td>
+					<a href="/kupit-3d-printer/manufacturing/" title="Производство">Производство</a>
+				</td>
+			</tr>
+				<tr>
+				<td>
+					<a href="/kupit-3d-printer/advertising/" title="Реклама">Реклама</a>
+				</td>
+			</tr>
+				<tr>
 				<td>
 					<a href="/kupit-3d-printer/stomatology/" title="Стоматология">Стоматология</a>
 				</td>
 			</tr>
-			<tr>
+				<tr>
 				<td>
-					<a href="/kupit-3d-printer/suvenirnaya-produkciya/" title="Сувенирная продукция">Сувенирная продукция</a>
+					<a href="/kupit-3d-printer/souvenirs/" title="Сувенирная промышленность">Сувенирная промышленность</a>
 				</td>
 			</tr>
-			<tr>
+				<tr>
 				<td>
-					<a href="/kupit-3d-printer/upakovka/" title="Упаковка и потребительские товары	">Упаковка и потребительские товары</a>
+					<a href="/kupit-3d-printer/packs/" title="Упаковка">Упаковка</a>
 				</td>
 			</tr>
-			<tr>
+				<tr>
 				<td>
-					<a href="/kupit-3d-printer/uvelirnoe-delo/" title="Ювелирное дело">Ювелирное дело</a>
+					<a href="/kupit-3d-printer/jewelery/" title="Ювелирная промышленность">Ювелирная промышленность</a>
 				</td>
 			</tr>
 			</tbody>
