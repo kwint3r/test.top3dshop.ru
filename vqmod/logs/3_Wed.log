@@ -1,15 +1,13 @@
----------- Date: 2015-04-15 23:37:53 ~ IP : 159.253.19.178 ----------
-REQUEST URI : /kupit-3d-printer/picaso-3d-designer.html
+---------- Date: 2015-04-22 16:57:00 ~ IP : 159.253.19.178 ----------
+REQUEST URI : /ghbynth/index.php?route=module/vqmod_manager/clear_log&amp;token=3402630024d4099b792cedad15c7a697
 MOD DETAILS:
-   modFile   : /var/www/top3dshop/data/www/top3dshop.ru/vqmod/xml/autocalc_price_option_v2.0.17.xml
-   id        : Обновление цены при выборе опций (без AJAX)
-   version   : 2.0.17
-   vqmver    : 2.2.1
-   author    : mpn2005
-
-File Name    : catalog/view/theme/*/template/product/product.tpl(9)
-VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
-
+   modFile   : /var/www/top3dshop/data/www/test.top3dshop.ru/vqmod/xml/vqmm_menu_shortcut.xml
+   id        : VQMod Manager Menu Shortcut
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : Ryan (rph) - OpenCartHelp.com
+VQModObject::parseMods - Could not resolve path for [admin/controller/common/header.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [admin/view/template/common/header.tpl] (SKIPPED)
 ----------------------------------------------------------------------
 
 

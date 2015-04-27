@@ -16,15 +16,137 @@
 					<ul>
 						<? $i = 1; ?>
 						<?php 
-						foreach ($breadcrumbs as $breadcrumb) {
-							if($i == count($breadcrumbs)){
-								?><li><?php echo $breadcrumb['text']; ?></li><?
+						if ($_SERVER['REQUEST_URI'] == '/kupit-3d-printer/autoprom/') { 
+							foreach ($breadcrumbs as $breadcrumb) { ?>
+								<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+							<?php $i++;	}
+						?>							
+						<li><?php echo "Автопром";?></li>							
+						<?php 
+						}
+						elseif ($_SERVER['REQUEST_URI'] == '/kupit-3d-printer/architecture/') { 
+							foreach ($breadcrumbs as $breadcrumb) { ?>
+								<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+							<?php $i++;	}
+						?>							
+						<li><?php echo "Архитектура";?></li>							
+						<?php 
+						}
+						elseif ($_SERVER['REQUEST_URI'] == '/kupit-3d-printer/aerospace/') { 
+							foreach ($breadcrumbs as $breadcrumb) { ?>
+								<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+							<?php $i++;	}
+						?>							
+						<li><?php echo "Аэрокосмическая";?></li>							
+						<?php 
+						}
+							elseif ($_SERVER['REQUEST_URI'] == '/kupit-3d-printer/design/') { 
+							foreach ($breadcrumbs as $breadcrumb) { ?>
+								<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+							<?php $i++;	}
+						?>							
+						<li><?php echo "Дизайн";?></li>							
+						<?php 
+						}
+							elseif ($_SERVER['REQUEST_URI'] == '/kupit-3d-printer/breadboarding/') { 
+							foreach ($breadcrumbs as $breadcrumb) { ?>
+								<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+							<?php $i++;	}
+						?>							
+						<li><?php echo "Макетирование";?></li>							
+						<?php 
+						}
+							elseif ($_SERVER['REQUEST_URI'] == '/kupit-3d-printer/medicine/') { 
+							foreach ($breadcrumbs as $breadcrumb) { ?>
+								<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+							<?php $i++;	}
+						?>							
+						<li><?php echo "Медицина";?></li>							
+						<?php 
+						}
+							elseif ($_SERVER['REQUEST_URI'] == '/kupit-3d-printer/military/') { 
+							foreach ($breadcrumbs as $breadcrumb) { ?>
+								<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+							<?php $i++;	}
+						?>							
+						<li><?php echo "Оборонная промышленность";?></li>							
+						<?php 
+						}
+							elseif ($_SERVER['REQUEST_URI'] == '/kupit-3d-printer/education/') { 
+							foreach ($breadcrumbs as $breadcrumb) { ?>
+								<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+							<?php $i++;	}
+						?>							
+						<li><?php echo "Образование";?></li>							
+						<?php 
+						}
+							elseif ($_SERVER['REQUEST_URI'] == '/kupit-3d-printer/manufacturing/') { 
+							foreach ($breadcrumbs as $breadcrumb) { ?>
+								<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+							<?php $i++;	}
+						?>							
+						<li><?php echo "Производство";?></li>							
+						<?php 
+						}
+							elseif ($_SERVER['REQUEST_URI'] == '/kupit-3d-printer/advertising/') { 
+							foreach ($breadcrumbs as $breadcrumb) { ?>
+								<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+							<?php $i++;	}
+						?>							
+						<li><?php echo "Реклама";?></li>							
+						<?php 
+						}
+							elseif ($_SERVER['REQUEST_URI'] == '/kupit-3d-printer/stomatology/') { 
+							foreach ($breadcrumbs as $breadcrumb) { ?>
+								<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+							<?php $i++;	}
+						?>							
+						<li><?php echo "Стоматология";?></li>							
+						<?php 
+						}
+							elseif ($_SERVER['REQUEST_URI'] == '/kupit-3d-printer/architecture/') { 
+							foreach ($breadcrumbs as $breadcrumb) { ?>
+								<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+							<?php $i++;	}
+						?>							
+						<li><?php echo "Архитектура";?></li>							
+						<?php 
+						}
+							elseif ($_SERVER['REQUEST_URI'] == '/kupit-3d-printer/souvenirs/') { 
+							foreach ($breadcrumbs as $breadcrumb) { ?>
+								<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+							<?php $i++;	}
+						?>							
+						<li><?php echo "Сувенирная продукция";?></li>							
+						<?php 
+						}
+							elseif ($_SERVER['REQUEST_URI'] == '/kupit-3d-printer/packs/') { 
+							foreach ($breadcrumbs as $breadcrumb) { ?>
+								<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+							<?php $i++;	}
+						?>							
+						<li><?php echo "Упаковка";?></li>							
+						<?php 
+						}
+						elseif ($_SERVER['REQUEST_URI'] == '/kupit-3d-printer/jewelery/') { 
+							foreach ($breadcrumbs as $breadcrumb) { ?>
+								<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+							<?php $i++;	}
+						?>							
+						<li><?php echo "Упаковка";?></li>							
+						<?php 
+						}
+						else {
+							foreach ($breadcrumbs as $breadcrumb) {
+								if($i == count($breadcrumbs)){
+									?><li><?php echo $breadcrumb['text']; ?></li><?
+								}
+								else{
+									?><li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li><?
+								}
+								$i++;
 							}
-							else{
-								?><li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li><?
-							}
-							$i++;
-						} 
+						}
 						?>
 					</ul>
 					<?/* <h2 id="title-page"><?php echo $heading_title; ?>

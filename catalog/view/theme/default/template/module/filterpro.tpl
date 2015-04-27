@@ -63,8 +63,89 @@
 </div>
 
 
-<!-- Перенос фильтра специализация под цену -->
-	<?php if($attributes) { ?>
+<!-- Перенос фильтра специализация под цену Отключен, Статичные ссылки-->
+<div class="attribute_box option_box static_spec_filter">
+	<div class="option_name ">
+		Специализация											
+	</div>
+	<div class="collapsible">
+	<table>
+		<tbody>
+			<tr>
+				<td>
+					<a href="/kupit-3d-printer/autoprom/" title="Автопром">Автопром</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/kupit-3d-printer/architecture/" title="Архитектура">Архитектура</a>
+				</td>
+			</tr>
+				<tr>
+				<td>
+					<a href="/kupit-3d-printer/aerospace/" title="Аэрокосмическая">Аэрокосмическая</a>
+				</td>
+			</tr>
+				<tr>
+				<td>
+					<a href="/kupit-3d-printer/design/" title="Дизайн">Дизайн</a>
+				</td>
+			</tr>
+				<tr>
+				<td>
+					<a href="/kupit-3d-printer/breadboarding/" title="Макетирование">Макетирование</a>
+				</td>
+			</tr>
+				<tr>
+				<td>
+					<a href="/kupit-3d-printer/medicine/" title="Медицина">Медицина</a>
+				</td>
+			</tr>
+				<tr>
+				<td>
+					<a href="/kupit-3d-printer/military/" title="Оборонная промышленность">Оборонная промышленность</a>
+				</td>
+			</tr>
+				<tr>
+				<td>
+					<a href="/kupit-3d-printer/education/" title="Образование">Образование</a>
+				</td>
+			</tr>
+				<tr>
+				<td>
+					<a href="/kupit-3d-printer/manufacturing/" title="Производство">Производство</a>
+				</td>
+			</tr>
+				<tr>
+				<td>
+					<a href="/kupit-3d-printer/advertising/" title="Реклама">Реклама</a>
+				</td>
+			</tr>
+				<tr>
+				<td>
+					<a href="/kupit-3d-printer/stomatology/" title="Стоматология">Стоматология</a>
+				</td>
+			</tr>
+				<tr>
+				<td>
+					<a href="/kupit-3d-printer/souvenirs/" title="Сувенирная промышленность">Сувенирная промышленность</a>
+				</td>
+			</tr>
+				<tr>
+				<td>
+					<a href="/kupit-3d-printer/packs/" title="Упаковка">Упаковка</a>
+				</td>
+			</tr>
+				<tr>
+				<td>
+					<a href="/kupit-3d-printer/jewelery/" title="Ювелирная промышленность">Ювелирная промышленность</a>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+	<?php if (false){//if($attributes) { ?>
 		<?php foreach($attributes as $attribute_group_id => $attribute) { ?>
 			<?php if($attr_group) { ?>
 				<div class="option_box">

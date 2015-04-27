@@ -143,12 +143,6 @@ $attachment
 --PHP-mixed-$boundary--
 ";
 $message = ob_get_clean();
-
-//$fh=fopen('log.txt','w');
-//fwrite($fh,$message);
-
-
-
 /*
         $message = "
 --_1_$boundary
@@ -241,7 +235,11 @@ $attachment
         }else{
             $output = "Письмо не отправлено. Ошибка: " . $result;
         }
+<<<<<<< HEAD
+    }	
+=======
     }   
+>>>>>>> c51ddf5039f94701ff5a54189dcc6ef5e2ac3ea8
 
 
     //mail($to, '=?UTF-8?B?'.base64_encode($subject).'?=', $message, $signed_headers.$headers, "-fnoreply@top3dshop.ru");    
