@@ -6,7 +6,7 @@ $db=mysql_connect($server_db, $user_db, $password_db) or die ('Could not connect
 mysql_query('SET NAMES utf8');
 mysql_select_db('u5822246_magazin',$db) or die ('Cant use u5822246_magazin : ' . mysql_error());
 $query=('SELECT mac_product_to_category.category_id, mac_product.product_id, mac_product.model, mac_product.date_added, mac_product.price FROM mac_product INNER JOIN 
-mac_product_to_category ON mac_product.product_id=mac_product_to_category.product_id WHERE mac_product_to_category.main_category="1" ORDER BY  mac_product.model 
+mac_product_to_category ON mac_product.product_id=mac_product_to_category.product_id WHERE mac_product_to_category.main_category="1" AND mac_product_to_category.category_id="62"  ORDER BY  mac_product.model 
 ');
   $result=mysql_query($query) or die ('Invalid query: ' . mysql_error());
 while ( $row=mysql_fetch_row($result) ) {

@@ -66,6 +66,13 @@ if (isset ($_POST['contactFF'])) {
 
     if($_SERVER['HTTP_REFERER'] == 'http://top3dshop.ru/3d-pechat-ob-ektov.html' 
         || $_SERVER['HTTP_REFERER'] == 'http://top3dshop.ru/3d-skanirovanie.html'
+		|| $_SERVER['HTTP_REFERER'] == 'http://top3dshop.ru/3d-modeling.html'
+		|| $_SERVER['HTTP_REFERER'] == 'http://top3dshop.ru/silicon-molding.html'
+		|| $_SERVER['HTTP_REFERER'] == 'http://top3dshop.ru/arenda.html'
+		|| $_SERVER['HTTP_REFERER'] == 'http://top3dshop.ru/leasing.html'
+		|| $_SERVER['HTTP_REFERER'] == 'http://top3dshop.ru/master-klass.html'
+		|| $_SERVER['HTTP_REFERER'] == 'http://top3dshop.ru/obuchenie.html'
+		|| $_SERVER['HTTP_REFERER'] == 'http://top3dshop.ru/servisnoe-obsluzhivanie-i-remont.html'
         || $_SERVER['HTTP_REFERER'] == 'http://test.top3dshop.ru/3d-pechat-ob-ektov.html'
         || $_SERVER['HTTP_REFERER'] == 'http://test.top3dshop.ru/3d-skanirovanie.html')
         $to = "stl@top3dshop.ru";

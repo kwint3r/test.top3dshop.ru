@@ -264,7 +264,7 @@
 			          <input type="radio" <?php echo (isset($opt_checked) ? $opt_checked : ''); $opt_checked=""; ?> name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>"  points="<?php echo (isset($option_value['points_value']) ? $option_value['points_value'] : 0); ?>" price_prefix="<?php echo $option_value['price_prefix']; ?>" price="<?php echo $option_value['price_value']; ?>" id="option-value-<?php echo $option_value['product_option_value_id']; ?>" />
 			          <label for="option-value-<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
 			            <!--<?php //if ($option_value['price']) { ?>
-			            (<?php //echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
+			            (<?php //echo $option_value['price_prefix']; ?><?php //echo $option_value['price']; ?>)
 			            <?php //} ?>-->
 
 			            (<?php echo $option_value['sum_price']; ?>)
@@ -307,18 +307,8 @@
 			              <td><label for="option-value-<?php echo $option_value['product_option_value_id']; ?>"><img src="<?php echo $option_value['image']; ?>" alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>" /></label></td>
 			              <td><label for="option-value-<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
 			                  <?php if ($option_value['price']) { ?>
-			                  
-        
-          <?php
-          if ($option_value['price_prefix'] == '*') {
-            if ($option_value['price_value'] != 1.0)
-              printf("(%+d%%)", round(($option_value['price_value'] * 100) - 100) );
-          } else {
-            echo "(".$option_value['price_prefix'].$option_value['price'].")"; 
-          }
-          ?>
-        
-      
+			                  <!--(<?php //echo $option_value['price_prefix']; ?><?php //echo $option_value['price']; ?>)-->
+				            (<?php echo $option_value['sum_price']; ?>)
 			                  <?php } ?>
 			                </label></td>
 			            </tr>
@@ -454,7 +444,7 @@
                          <p style="text-align: center; margin: 0 0 10px 0">Адрес демо зала</p>
                          <select id="demonstration_address" name="demonstration_address">
                              <option selected value="САНКТ-ПЕТЕРБУРГ, ул. Киевская, 6, офис 314">САНКТ-ПЕТЕРБУРГ, ул. Киевская, 6, офис 314</option>
-                             <option value="МОСКВА, ул. Дубининская, 67/2 офис 2-35">МОСКВА, ул. Дубининская, 67/2 офис 2-35</option>
+                             <option value="МОСКВА, Лужнецкая набережная, 10а стр.7 оф. 302">МОСКВА, Лужнецкая набережная, 10а стр.7 оф. 302</option>
                          </select> <br>
                          <input type="text" id="demonstration_name" name="demonstration_name" placeholder="Имя"> <br>
                          <input type="text" id="demonstration_phone" name="demonstration_phone" placeholder="Телефон"> <br>
@@ -689,23 +679,29 @@
 			$uniq_cats = $uniq_cats_1;
 		}
 		$num_uniq_cats = count($uniq_cats);
+		$cat_names = array();
+		$products_new = array();
 		for ($j = 0; $j < $num_uniq_cats; $j++) {
 
-			$cat_names = array();
-			$products_new = array();
 			foreach ($products as $prod) {
 				if ($prod['category_id'] == $uniq_cats[$j]) {
 					$products_new[] = $prod;
-					$cat_names[] = $prod['category_name'];
+					if(($key = array_search($prod['category_name'], $cat_names)) === false) {
+						$add_to_cats = $prod['category_name'];
+						$cat_names[] = $add_to_cats;
+					}
 				}
 			}
+
 	?>
+			<?php if($cat_names[$j]) { ?>
 				<?php if ($j == 0) {?>
 					<li class="active">
 				<?php } else { ?>
 					<li class="">
 				<?php } ?>
 				<a href="#related-<?php echo $id."-".$j;?>" data-toggle="tab" style="font-weight: bold"><?php echo $cat_names[$j];?></a></li>
+			<?php } ?>
 	<?php }?>
 			</ul>
 
@@ -792,6 +788,9 @@
 										<?php } else { ?>
 										<span id="formated_price" class="price-old" price="<?php echo $price_value; ?>"><?php echo $price; /**/ ?></span> <span class="price-new"><span id="formated_special" price="<?php echo $special_value; ?>"><?php echo $special; /**/ ?></span></span>
 										<?php } ?>
+									</div>
+									<?php } else {?>
+									<div class="price">
 									</div>
 									<?php } ?>
 								
@@ -978,7 +977,29 @@ $('#button-vkredit').bind('click', function() {
 			} 
 			
 			if (json['success']) {
+                var pixels_per_second = 50;
+                distance = Math.abs($(document.body).scrollTop( ) - $('#button-vkredit').offset( ).top);
+                scroll_duration = (distance / pixels_per_second) * 1000;
+                scroll_duration = $('#button-vkredit').offset( ).top+$('#button-vkredit').offset( ).top*0.2;
+				$('html, body').animate({
+				        scrollTop: $("#button-vkredit").offset().top-300
+				    }, 500);
+				setTimeout(function(){ }, 500);
 				$('#image')
+				  .clone()
+				  .css({'position' : 'absolute', 'z-index' : '11100', 
+				  	top: $('#button-vkredit').offset().top+300, 
+				  	left:$('#button-vkredit').offset().left, 
+				  	width:150, height:150})
+				  .appendTo("body")
+				  .animate({opacity: 0.05,
+					left: $("#cart_block").offset()['left'],
+					top: $("#cart_block").offset()['top'],
+					width: 20}, scroll_duration, function() {
+					$(this).remove();
+				});				
+
+				/*$('#image')
 				  .clone()
 				  .css({'position' : 'absolute', 'z-index' : '11100', top: $('#image').offset().top-300, left:$('#image').offset().left-100})
 				  .appendTo("body")
@@ -987,7 +1008,7 @@ $('#button-vkredit').bind('click', function() {
 					top: $("#cart_block").offset()['top'],
 					width: 20}, 1000, function() {
 					$(this).remove();
-				});
+				});*/
 				$('#cart_block').load('index.php?route=module/cart #cart_block > *');
 			}	
 		}
@@ -1065,7 +1086,29 @@ $('#button-cart').bind('click', function() {
 			} 
 			
 			if (json['success']) {				
+                var pixels_per_second = 50;
+                distance = Math.abs($(document.body).scrollTop( ) - $('#button-cart').offset( ).top);
+                scroll_duration = (distance / pixels_per_second) * 1000;
+                scroll_duration = $('#button-cart').offset( ).top+$('#button-cart').offset( ).top*0.2;
+				$('html, body').animate({
+				        scrollTop: $("#button-cart").offset().top-300
+				    }, 500);
+				setTimeout(function(){ }, 500);
 				$('#image')
+				  .clone()
+				  .css({'position' : 'absolute', 'z-index' : '11100', 
+				  	top: $('#button-cart').offset().top+300, 
+				  	left:$('#button-cart').offset().left, 
+				  	width:150, height:150})
+				  .appendTo("body")
+				  .animate({opacity: 0.05,
+					left: $("#cart_block").offset()['left'],
+					top: $("#cart_block").offset()['top'],
+					width: 20}, scroll_duration, function() {
+					$(this).remove();
+				});				
+
+				/*$('#image')
 				  .clone()
 				  .css({'position' : 'absolute', 'z-index' : '11100', top: $('#image').offset().top-300, left:$('#image').offset().left-100})
 				  .appendTo("body")
@@ -1074,7 +1117,7 @@ $('#button-cart').bind('click', function() {
 					top: $("#cart_block").offset()['top'],
 					width: 20}, 1000, function() {
 					$(this).remove();
-				});
+				});*/
 				$('#cart_block').load('index.php?route=module/cart #cart_block > *');
 			}	
 		}

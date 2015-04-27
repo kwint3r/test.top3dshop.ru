@@ -51,21 +51,6 @@
     
     <!-- 2012-12-15 21:51: Для опции умножить свой вывод -->    
     <operation>
-      <search position="replace"><![CDATA[(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)]]></search>
-      <add>
-        <![CDATA[
-          <?php
-          if ($option_value['price_prefix'] == '*') {
-            if ($option_value['price_value'] != 1.0)
-              printf("(%+d%%)", round(($option_value['price_value'] * 100) - 100) );
-          } else {
-            echo "(".$option_value['price_prefix'].$option_value['price'].")"; 
-          }
-          ?>
-        ]]>
-      </add>
-    </operation>
-    <operation>
       <search position="before"><![CDATA[<?php echo $footer; ?>]]></search>
       <add>
         <![CDATA[
