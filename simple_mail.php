@@ -61,19 +61,26 @@ var_dump($resp);
 
 if (isset ($_POST['contactFF'])) {
     if(isset($resp) && $resp['success']){
-	//$output = 'Ваше сообщение получено, спасибо!';
+    //$output = 'Ваше сообщение получено, спасибо!';
     //$output = '<p style="color: green">Ваше сообщение получено, спасибо!</p>';
 
-	if($_SERVER['HTTP_REFERER'] == 'http://top3dshop.ru/3d-pechat-ob-ektov.html' 
+    if($_SERVER['HTTP_REFERER'] == 'http://top3dshop.ru/3d-pechat-ob-ektov.html' 
         || $_SERVER['HTTP_REFERER'] == 'http://top3dshop.ru/3d-skanirovanie.html'
+		|| $_SERVER['HTTP_REFERER'] == 'http://top3dshop.ru/3d-modeling.html'
+		|| $_SERVER['HTTP_REFERER'] == 'http://top3dshop.ru/silicon-molding.html'
+		|| $_SERVER['HTTP_REFERER'] == 'http://top3dshop.ru/arenda.html'
+		|| $_SERVER['HTTP_REFERER'] == 'http://top3dshop.ru/leasing.html'
+		|| $_SERVER['HTTP_REFERER'] == 'http://top3dshop.ru/master-klass.html'
+		|| $_SERVER['HTTP_REFERER'] == 'http://top3dshop.ru/obuchenie.html'
+		|| $_SERVER['HTTP_REFERER'] == 'http://top3dshop.ru/servisnoe-obsluzhivanie-i-remont.html'
         || $_SERVER['HTTP_REFERER'] == 'http://test.top3dshop.ru/3d-pechat-ob-ektov.html'
         || $_SERVER['HTTP_REFERER'] == 'http://test.top3dshop.ru/3d-skanirovanie.html')
-		$to = "stl@top3dshop.ru";
-	else
-		$to = "3d@top3dshop.ru";
+        $to = "stl@top3dshop.ru";
+    else
+        $to = "3d@top3dshop.ru";
 
     //$to = "iozjymrdclg4o5@dkimvalidator.com";
-	//$to = "appigram@gmail.com";
+    //$to = "appigram@gmail.com";
     //$to = "hello@artzoomi.com";
 
     //$to = "simbiryatin@gmail.com";
@@ -136,11 +143,6 @@ $attachment
 --PHP-mixed-$boundary--
 ";
 $message = ob_get_clean();
-//$fh=fopen('log.txt','w');
-//fwrite($fh,$message);
-
-
-
 /*
         $message = "
 --_1_$boundary
@@ -233,7 +235,11 @@ $attachment
         }else{
             $output = "Письмо не отправлено. Ошибка: " . $result;
         }
+<<<<<<< HEAD
     }	
+=======
+    }   
+>>>>>>> c51ddf5039f94701ff5a54189dcc6ef5e2ac3ea8
 
 
     //mail($to, '=?UTF-8?B?'.base64_encode($subject).'?=', $message, $signed_headers.$headers, "-fnoreply@top3dshop.ru");    
@@ -242,15 +248,15 @@ $attachment
 
     //mail($to, $subject, $message, $headers);
 
-	//echo $output;
-	//echo '<meta http-equiv="refresh" content="4;URL=http://top3dshop.ru">';
+    //echo $output;
+    //echo '<meta http-equiv="refresh" content="4;URL=http://top3dshop.ru">';
     echo json_encode(array("success"=>1, "output"=>$output));
 
     } else{
-    	$output = '<p style="color: red">Произошла ошибка</p>';
+        $output = '<p style="color: red">Произошла ошибка</p>';
         echo json_encode(array("success"=>0, "output"=>$output));
-    	//echo $output;
-    	//echo '<meta http-equiv="refresh" content="4;URL='.$_SERVER['HTTP_REFERER'].'">';
+        //echo $output;
+        //echo '<meta http-equiv="refresh" content="4;URL='.$_SERVER['HTTP_REFERER'].'">';
     //}
     }
 }

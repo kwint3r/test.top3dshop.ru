@@ -444,7 +444,7 @@
                          <p style="text-align: center; margin: 0 0 10px 0">Адрес демо зала</p>
                          <select id="demonstration_address" name="demonstration_address">
                              <option selected value="САНКТ-ПЕТЕРБУРГ, ул. Киевская, 6, офис 314">САНКТ-ПЕТЕРБУРГ, ул. Киевская, 6, офис 314</option>
-                             <option value="МОСКВА, ул. Дубининская, 67/2 офис 2-35">МОСКВА, ул. Дубининская, 67/2 офис 2-35</option>
+                             <option value="МОСКВА, Лужнецкая набережная, 10а стр.7 оф. 302">МОСКВА, Лужнецкая набережная, 10а стр.7 оф. 302</option>
                          </select> <br>
                          <input type="text" id="demonstration_name" name="demonstration_name" placeholder="Имя"> <br>
                          <input type="text" id="demonstration_phone" name="demonstration_phone" placeholder="Телефон"> <br>

@@ -35,7 +35,10 @@ system/upload/*
 !system/upload/index.html
 
 !data/index.html
-
+# vqmod cache/
+vqmod/vqcache/*
+vqmod/mods.cache
+vqmod/checked.cache
 # Flags 
 # remove sharp char if you want to add flags to gitignore
 # flags/*
