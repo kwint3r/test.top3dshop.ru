@@ -39,6 +39,7 @@ system/upload/*
 vqmod/vqcache/*
 vqmod/mods.cache
 vqmod/checked.cache
+vqmod/logs/*
 # Flags 
 # remove sharp char if you want to add flags to gitignore
 # flags/*
