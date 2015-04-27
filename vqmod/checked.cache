@@ -374,3 +374,17 @@ catalog/controller/account/download.php
 catalog/controller/account/newsletter.php
 catalog/controller/account/recurring.php
 ghbynth/controller/payment/payonline.php
+ghbynth/controller/setting/store.php
+ghbynth/language/russian/setting/store.php
+ghbynth/view/template/setting/store_list.tpl
+catalog/controller/payment/pp_standard.php
+catalog/view/theme/default/template/payment/pp_standard.tpl
+catalog/controller/payment/bank_transfer.php
+catalog/view/theme/default/template/payment/bank_transfer.tpl
+ghbynth/controller/report/product_viewed.php
+ghbynth/language/russian/report/product_viewed.php
+ghbynth/model/report/product.php
+ghbynth/view/template/report/product_viewed.tpl
+ghbynth/controller/tool/backup.php
+ghbynth/language/russian/tool/backup.php
+ghbynth/view/template/tool/backup.tpl
