@@ -1,11 +1,8 @@
 <style type="text/css">
 
 </style>
-
 <form action="/simple_mail.php" enctype="multipart/form-data" id="feedback-form" method="post">
-<div style="font-size:16px;font-family:Open Sans;display:inline-block;margin-left:70px;"> Остались вопросы? Позвоните нам по телефону <div 
-style="display:inline-block;font-size:16px;font-weight:bold;" class="new roistat-phone"><a class="new roistat-phone">8 (800) 555 11 59</a></div></div><div 
-style="font-size:16px;text-align:center;"> или задайте с помощью этой формы</div>
+<p style="font:24px Open Sans;font-weight:bold;text-align:center;"> Сделать заказ </p>
     <span style="font-family:arial,helvetica,sans-serif;">
         <span style="float: left;">
             <label for="nameFF">Имя:</label>
@@ -30,6 +27,9 @@ style="font-size:16px;text-align:center;"> или задайте с помощь
         <input id="submitFF" type="submit" value="Отправить заявку"/>&nbsp;
     </span>
     <span class="feedback-error"></span>
+	<br/>
+	<br/>
+	<p style="font-size:18px;font-family:Open Sans;text-align:center"> Остались вопросы? Позвоните нам по телефону  <span class="new roistat-phone"><a class="new roistat-phone">8 (800) 555 11 59</a></span>
 </form>
 
 <script type="text/javascript">
