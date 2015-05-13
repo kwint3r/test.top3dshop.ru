@@ -96,16 +96,7 @@ if (isset ($_POST['contactFF'])) {
     $from = "noreply@top3dshop.ru";
 
     if (file_exists($file_up)) {
-
-
-        $attachment = chunk_split(base64_encode(file_get_contents($file_up)));
-
-        $info = new SplFileInfo($file_up);
-
-        $filename = $info->getFilename();
-
-        $info = new finfo(FILEINFO_MIME_TYPE);
-        $filetype = $info->file($file_up);
+        $files = explode(";", $file_up);
 
 
         $boundary = md5(date('r', time()));
@@ -121,28 +112,49 @@ if (isset ($_POST['contactFF'])) {
         $headers .= "X-Spam:  Not detected\n";
         $headers .= "X-Mailer: PHP/" . phpversion() . "\n";
         $headers .= "Content-Type: multipart/mixed; boundary=\"PHP-mixed-".$boundary."\"\n";
-    ob_start();
- echo "
---PHP-mixed-$boundary
-Content-Type: multipart/alternative; boundary=\"PHP-alt-$boundary\"
 
---PHP-alt-$boundary
-Content-Type: text/plain; charset=\"utf-8\"
-Content-Transfer-Encoding: 7bit
+        ob_start();
+        echo "
+        --PHP-mixed-$boundary
+        Content-Type: multipart/alternative; boundary=\"PHP-alt-$boundary\"
 
-$message
+        --PHP-alt-$boundary
+        Content-Type: text/plain; charset=\"utf-8\"
+        Content-Transfer-Encoding: 7bit
 
---PHP-alt-$boundary--
+        $message
 
---PHP-mixed-$boundary
-Content-Type: $filetype; name=\"$filename\" 
-Content-Transfer-Encoding: base64 
-Content-Disposition: attachment 
+        --PHP-alt-$boundary--";
+        $message = ob_get_clean();
 
-$attachment
---PHP-mixed-$boundary--
-";
-$message = ob_get_clean();
+        foreach ($files as $file) {
+
+            $attachment = chunk_split(base64_encode(file_get_contents($file_up)));
+
+            $info = new SplFileInfo($file_up);
+
+            $filename = $info->getFilename();
+
+            $info = new finfo(FILEINFO_MIME_TYPE);
+            $filetype = $info->file($file_up);
+
+
+
+            ob_start();
+            echo "
+            $message
+            
+            --PHP-mixed-$boundary
+            Content-Type: $filetype; name=\"$filename\" 
+            Content-Transfer-Encoding: base64 
+            Content-Disposition: attachment 
+
+            $attachment
+            --PHP-mixed-$boundary--
+            ";
+            $message = ob_get_clean();
+        }
+
 /*
         $message = "
 --_1_$boundary
@@ -183,7 +195,9 @@ $attachment
       
     $mailSMTP = new SendMailSmtpClass('noreply@top3dshop.ru', 'no2015', 'ssl://smtp.yandex.ru', 'Top3dShop', 465);
     // $mailSMTP = new SendMailSmtpClass('логин', 'пароль', 'хост', 'имя отправителя');
-      
+    if ($to == "stl@top3dshop.ru") {
+        $mailSMTP->send("3d@top3dshop.ru", $subject, $message, $headers); // отправляем письмо
+    }
     $result =  $mailSMTP->send($to, $subject, $message, $headers); // отправляем письмо
     // $result =  $mailSMTP->send('Кому письмо', 'Тема письма', 'Текст письма', 'Заголовки письма');
     if($result === true){
@@ -227,7 +241,10 @@ $attachment
           
         $mailSMTP = new SendMailSmtpClass('noreply@top3dshop.ru', 'no2015', 'ssl://smtp.yandex.ru', 'Top3dShop', 465);
         // $mailSMTP = new SendMailSmtpClass('логин', 'пароль', 'хост', 'имя отправителя');
-          
+        if ($to == "stl@top3dshop.ru") {
+           $mailSMTP->send("3d@top3dshop.ru", $subject, $message, $headers); // отправляем письмо
+        }     
+
         $result =  $mailSMTP->send($to, $subject, $message, $headers); // отправляем письмо
         // $result =  $mailSMTP->send('Кому письмо', 'Тема письма', 'Текст письма', 'Заголовки письма');
         if($result === true){
@@ -235,11 +252,7 @@ $attachment
         }else{
             $output = "Письмо не отправлено. Ошибка: " . $result;
         }
-<<<<<<< HEAD
-    }	
-=======
     }   
->>>>>>> c51ddf5039f94701ff5a54189dcc6ef5e2ac3ea8
 
 
     //mail($to, '=?UTF-8?B?'.base64_encode($subject).'?=', $message, $signed_headers.$headers, "-fnoreply@top3dshop.ru");    

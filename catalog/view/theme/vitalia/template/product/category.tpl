@@ -1404,7 +1404,26 @@
   		</div>
   	</div>
   </div>
-  
+  <script type="text/javascript">
+  jQuery(function(){
+    setTimeout(function() {
+      if (window.location.pathname == '/materiali/casting-silicon/') {
+        jQuery(".product-grid .product").each(function( product ) {
+          var price = jQuery(this).find( ".price" ).text();
+          if (price.replace(/[^0-9]/g,"").length > 0) {
+            jQuery(this).find( ".price" ).html("от "+price);
+          }
+        });
+        jQuery(".product-list > div").each(function( product ) {
+          var price = jQuery(this).find( ".price" ).text();
+          if (price.replace(/[^0-9]/g,"").length > 0) {
+            jQuery(this).find( ".price" ).html("от "+price);
+          }
+        });
+      }
+    }, 3000);
+  })
+  </script>
   <!-- Products list -->
   <div class="product-list"<?php if($this->theme_options->get('default_list_grid') == '1') { echo ' style="display:none;"'; } ?>>
   	<?php foreach ($products as $product) { ?>
@@ -1442,13 +1461,12 @@
   				</div>
   				<?php } ?>
   			</div>
-  			
   			<div class="actions col-sm-3">
   				<div style='text-align: center;'>
 				<?php if ($product['price']>0) { ?>
   					<div class="price">
   						<?php if (!$product['special']) { ?>
-  						<?php echo $product['price']; ?>
+  						  <?php echo $product['price']; ?>
   						<?php } else { ?>
   						<span class="price-old"><?php echo $product['price']; ?></span> <span class="price-new"><?php echo $product['special']; ?></span>
   						<?php } ?>

@@ -47,9 +47,23 @@ function instockrequestmass(products) {
 }
 
 function instockrequest(product_id) {
+    var label_text = "";
+    $(".options .option input[type='radio']:checked").each(function() {
+        var idVal = $(this).attr("id");
+        label_text = $(".options .option #radio-name-"+idVal+"").val();
+    });
+    var opt_type = $(".options .option b").text();
+
+    var data_opt = {
+        "product_id": parseInt(product_id),
+        "option_type": opt_type,
+        "option_chooser": label_text
+    };
+
     $.ajax({
         type:'post',
-        data:'product_id=' + product_id,
+       // data:'product_id=' + product_id,
+        data: {data: JSON.stringify(data_opt)},
         url:'index.php?route=module/clicker/instockrequest',
         dataType:'html',
         success:function (data) {

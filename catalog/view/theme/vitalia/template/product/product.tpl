@@ -121,9 +121,31 @@
 					      	 	<?php } ?>
 					      	 <?php } ?>
 
+					      	 <script type="text/javascript">
+					      	 	var mainRemoved = false;
+					      	 	function removeFromFancyboxMain(){
+				      	 			$(".product-image a").removeClass("fancy-group1");
+				      	 			mainRemoved = true;
+					      	 	}
 
+					      	 	function removeFromFancybox(){
+				      	 			$(".onethumbs").removeClass("fancy-group1");
+				      	 			mainRemoved = false;
+					      	 	}
+					      	 	$(function(){
+					      	 		$(".fancy-group1").fancybox({
+									    afterClose: function() { 
+									    	if (mainRemoved){
+										    	$(".product-image a").addClass("fancy-group1");
+										    } else {
+										    	$(".onethumbs").addClass("fancy-group1");
+										    }
+									    }
+									})
+					      	 	})
+					      	 </script>
 
-                              <a class="fancybox" href="<?php echo $popup; ?>" rel="group1" id="ex1" title="<?php echo $heading_title; ?>">
+                              <a class="fancy-group1" href="<?php echo $popup; ?>" rel="group1" id="ex1" title="<?php echo $heading_title; ?>" onclick="removeFromFancybox();">
                                   <img alt="" src="<?php echo $thumb; ?>" data-zoom-image="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" id="image" itemprop="image" >
                               </a>
 					     	 <!--<a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" id="ex1">
@@ -145,7 +167,7 @@
 					      		<li>
                                     <p>
 
-                                        <a class="fancybox" href="<?php echo $popup; ?>" rel="group1">
+                                        <a class="fancy-group1 onethumbs" href="<?php echo $popup; ?>" rel="group1" onclick="removeFromFancyboxMain();">
                                             <img alt="" src="<?php echo $thumb; ?>">
                                         </a>
 
@@ -158,7 +180,7 @@
 						        <?php foreach ($images as $image) { ?>
 						        <li>
                                     <p>
-                                        <a class="fancybox" href="<?php echo $image['popup']; ?>" rel="group1">
+                                        <a class="fancy-group1" href="<?php echo $image['popup']; ?>" rel="group1"  onclick="removeFromFancyboxMain();">
                                             <img alt="" src="<?php echo $image['thumb']; ?>">
                                         </a>
 
@@ -260,6 +282,7 @@
 			          <b><?php echo $option['name']; ?>:</b><br />
 			          <?php foreach ($option['option_value'] as $option_value) { ?>
 			          <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>" id="option-value-<?php echo $option_value['product_option_value_id']; ?>" />
+			          <input type="hidden" id="radio-name-option-value-<?php echo $option_value['product_option_value_id']; ?>" value="<?php echo $option_value['name']; ?>">
 			          <label for="option-value-<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
 			            <!--<?php //if ($option_value['price']) { ?>
 			            (<?php //echo $option_value['price_prefix']; ?><?php //echo $option_value['price']; ?>)
@@ -546,9 +569,17 @@
 		if($tab['content'] == 'desc') { $id = 'tab-desc'; }
   		if($tab['content'] == 'attribute') { $id = 'tab-attribute'; }
   		if($tab['content'] == 'review') { $id = 'tab-review'; }
-  		echo '<a href="#'.$id.'">'.$tab['heading'].'</a>';
+  			echo '<a href="#'.$id.'">'.$tab['heading'].'</a>';
   	} ?>
   </div>
+  <script type="text/javascript">
+	  $(function(){
+	  		jQuery('a[href="#tab-desc"').click(function(){
+	  			var new_loc = "<?php echo $record_info[0]['record_url']; ?>"
+	  			window.location = new_loc.replace("&amp;", "&");
+	  		})
+	  })
+  </script>
   <?php $i = 0; foreach($tabs as $tab) { $i++;
   	$id = 'tab_'.$i;	
   	if($tab['content'] != 'description' && $tab['content'] != 'attribute' && $tab['content'] != 'review' && $tab['content'] != 'desc') {		
@@ -556,9 +587,14 @@
   	}
   } ?>
   <div id="tab-description" class="tab-content" itemprop="description"><a href="/top-3d-shop-2-years.html"><img src="/image/data/main/banners/dr_product.png"></a><br/><br/><br/> <?php echo $description; ?></div>
-  <?php if (isset($record_info)) { ?>
-	<div id="tab-desc" class="tab-content" itemprop="desc"><?php echo html_entity_decode($record_info[0]['description']); ?></div>
+  <?php if (false) { ?>
+
+	<div id="tab-desc" class="tab-content" itemprop="desc">
+	<?php //echo html_entity_decode($record_info[0]['description']); ?>
+	<a href="<?php echo $record_info[0]['record_url']; ?>">Перейти к обзору</a>
+	</div>
   <?php } ?>
+
   <?php if ($attribute_groups) { ?>
   <div id="tab-attribute" class="tab-content">
     <table class="attribute" cellspacing="0">
@@ -929,8 +965,8 @@
 
 <script type="text/javascript">
 function upd_state2(qval) {
-  var realprice = parseInt($(".popover_prod #real_price_"+qval).val());
-  var qty = parseInt($('.popover_prod #product_qty_'+qval).val());
+  var realprice = parseInt($(".popover_prod #real_price_"+qval).val()) ? parseInt($(".popover_prod #real_price_"+qval).val()) : 0;
+  var qty = parseInt($('.popover_prod #product_qty_'+qval).val()) ? parseInt($('.popover_prod #product_qty_'+qval).val()) : 0;
   $('.popover_prod #oldprice_'+qval).html(formatMoney(realprice * qty));
 }
 

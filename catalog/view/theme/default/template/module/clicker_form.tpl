@@ -6,15 +6,17 @@
     <table id="aboutproduct">
       <thead>
         <tr>
-          <td style="width:40%;"><span class="aboutproductspan"><?php echo $text_product?></span></td>
-          <td style="width:20%;"><span class="aboutproductspan"><?php echo $text_price?></span></td>
-          <td style="width:20%;text-align:center;"><?php echo $text_qty?></td>
+          <td style="width:25%;"><span class="aboutproductspan"><?php echo $text_product?></span></td>
+          <td style="width:17%;"><span class="aboutproductspan"><?php echo $text_price?></span></td>
+          <td style="width:17%;text-align:center;"><?php echo $text_qty?></td>
+          <td style="width:21%;text-align:center;">Опции</td>
         </tr>
       </thead>
       <tbody>
         <input type="hidden" value="1" name="products_count">
         <input type="hidden" value="<?php echo $product['real_price']?>" id="real_price_1">
         <input type="hidden" value="<?php echo $product['name']?>" name="product_name_1">
+        <input type="hidden" value="<?php echo $options?>" name="product_option_1">
         <tr>
           <td><span class="aboutproductspan"><?php echo $product['name']?></span></td>
 			<td>
@@ -33,6 +35,11 @@
               </tr>
             </tbody></table>
           </td>
+      <td>
+        <span class="aboutproductspan">
+          <span id="options"><?php echo $options;?></span>
+        </span>
+      </td>
         </tr>
       </tbody>
     </table>
@@ -73,4 +80,5 @@
 </div>
 <script type="text/javascript">
 	var realprice = <?php echo $real_price; ?>;
+  if (!realprice) realprice = 0;
 </script>

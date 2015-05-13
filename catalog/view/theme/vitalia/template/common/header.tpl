@@ -13,6 +13,28 @@ $modules = new Modules($this->registry);
 <!--[if IE 9]> <html lang="<?php echo $lang; ?>" class="ie9 <?php if($this->theme_options->get( 'responsive_design' ) == '0') { echo 'no-'; } ?>responsive"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="<?php echo $lang; ?>" class="<?php if($this->theme_options->get( 'responsive_design' ) == '0') { echo 'no-'; } ?>responsive"> <!--<![endif]-->  
 <head>
+
+<?php 
+	if ($this->request->get['route'] == 'product/product') {
+		if (strpos($title,"Ванна") > 0) {
+			$title = str_replace("Ванна", "Ванну", $title);
+		} else if(strpos($title,"3D ручка") > 0) {
+			$title = str_replace("3D ручка", "3D ручку", $title);
+		} else if(strpos($title, "фотополимерная смола") > 0) {
+			$title = str_replace("фотополимерная смола", "фотополимерную смолу", $title);
+		} else if(strpos($title,"тележка") > 0) {
+			$title = str_replace("тележка", "тележку", $title);
+		} else if(strpos($title, "станция очистки") > 0) {
+			$title = str_replace("станция очистки", "станцию очистки", $title);
+		} else if(strpos($title, "Система просеивания металлического порошка PSA 500") > 0) {
+			$title = str_replace("Система просеивания металлического порошка PSA 500", "Систему просеивания металлического порошка PSA 500", $title);
+		} else if(strpos($title, "сетевая лицензия") > 0) {
+			$title = str_replace("сетевая лицензия", "сетевую лицензию", $title);
+		} else if(strpos($title, "печатающая головка") > 0) {
+			$title = str_replace("печатающая головка", "печатающую головку", $title);
+		}
+	}
+?>
 	<title><?php echo $title; ?></title>
 	<base href="<?php echo $base; ?>" />
 

@@ -524,6 +524,7 @@ class ControllerProductProduct extends Controller {
 
 				if ($record_info) {
 					$this->data['record_info'][] = array(
+						'record_url' => $this->url->link('record/record', 'record_id=' . $results[0]),
 						'record_id' => $record_info['record_id'],
 						'description'       => $record_info['description']
 					);

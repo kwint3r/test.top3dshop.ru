@@ -38,7 +38,7 @@
                     </td>
                     <td class="title">
 						<?php if ($payment_method['code'] == 'bank_transfer') { ?>
-						<label for="<?php echo $payment_method['code']; ?>"><?php echo $payment_method['title']; ?></label>
+						<label for="<?php echo $payment_method['code']; ?>"><img src="/image/payment/<?php echo $payment_method['code']; ?>.png" title="<?php echo $payment_method['code']; ?>" alt="<?php echo $payment_method['code']; ?>" style="vertical-align:middle"/><span style="font-size: 12px;"><?php echo $payment_method['title']; ?></span></label>
 						 <?php } else { ?>
 						<label for="<?php echo $payment_method['code']; ?>"><img src="/image/payment/<?php echo $payment_method['code']; ?>.png" title="<?php echo $payment_method['code']; ?>" alt="<?php echo $payment_method['code']; ?>"/></label>
 						<script>$('img').error(function(){ $(this).attr('src', '/image/payment/placeholder.gif');});</script>
