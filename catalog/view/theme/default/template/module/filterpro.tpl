@@ -64,6 +64,7 @@
 
 
 <!-- Перенос фильтра специализация под цену Отключен, Статичные ссылки-->
+<?php if ($_SERVER['REQUEST_URI'] == '/kupit-3d-printer/') {?>
 <div class="attribute_box option_box static_spec_filter">
 	<div class="option_name ">
 		Специализация											
@@ -160,7 +161,8 @@
 		</table>
 	</div>
 </div>
-	<div class="hidden_filter">
+<?php } ?>
+<div class="hidden_filter">
 	<?php if($attributes) { ?>
 		<?php foreach($attributes as $attribute_group_id => $attribute) { ?>
 			<?php if($attr_group) { ?>
@@ -214,8 +216,8 @@
 			<?php } ?>
 		<?php } ?>
 	<?php } ?>
-
 </div>
+
 	<?php if($filter_groups) { ?>
 		<ul class="box-filter option_box">
 		  <?php foreach ($filter_groups as $filter_group) { ?>

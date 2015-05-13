@@ -20,8 +20,8 @@
 		
 		<div id="g-recaptcha" class="g_recaptcha" data-sitekey="6LdOHAUTAAAAALDPU8O3nDLcSHKV6tnn5jVrPky6"></div>
 		
-        <label for="fileFF" >Прикрепить файл:</label>
-        <input class="w100" id="fileFF" name="fileFF" type="file" multiple="false"/><br/>
+        <label for="fileFF" >Прикрепить файлы:</label>
+        <input class="w100" id="fileFF" name="fileFF" type="file" multiple="true"/><br/>
 
         <input type="hidden" name="file_up" id="file_up" value="0">
         <input id="submitFF" type="submit" value="Отправить заявку"/>&nbsp;
@@ -83,9 +83,10 @@
                 'timestamp' : '<?php echo $timestamp;?>',
                 'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
             },
-            'uploader' : 'uploadify.php',
+            'uploader' : '/uploadify.php',
             'auto'     : true,
-            'buttonText' : 'Выберите файл',
+            'multi'      : true,
+            'buttonText' : 'Выберите файлы',
             'removeCompleted' : false,
 
 
@@ -104,9 +105,18 @@
                 }
                 else
                 {
-                    $('#file_up').val(data);
+                    if ($('#file_up').val() != '')  {
+                        var file_data = $('#file_up').val() + ';' + data;
+                        $('#file_up').val(file_data);
+                    } else {
+                        $('#file_up').val(data);
+                    }
                 }
+            },
+            'onUploadError' : function(file, errorCode, errorMsg, errorString) {
+                alert('The file ' + file.name + ' could not be uploaded: ' + errorString);
             }
+
         });
     });
 

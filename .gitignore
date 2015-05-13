@@ -44,6 +44,9 @@ vqmod/logs/*
 # remove sharp char if you want to add flags to gitignore
 # flags/*
 
+# Mails
+mail_attach/*
+
 # Log Files
 system/logs/*
 !system/logs/index.html

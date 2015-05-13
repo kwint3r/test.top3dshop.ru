@@ -27,17 +27,19 @@ class ControllerModuleClicker extends Controller {
 	}
 
 	public function instockrequest() {
-		if($this->request->server['REQUEST_METHOD'] == 'POST' && isset($this->request->post['product_id'])) {
+		//if($this->request->server['REQUEST_METHOD'] == 'POST' && isset($this->request->post['product_id'])) {
+		if($this->request->server['REQUEST_METHOD'] == 'POST' && isset($this->request->post['data'])) {
 			$this->data += $this->language->load('module/clicker');
 
-			$product_id = $this->request->post['product_id'];
-
+			$data_s = json_decode(str_replace('&quot;', '"', $this->request->post['data']), true);
+			$product_id = $data_s['product_id'];
 			$this->load->model('catalog/product');
 			$product = $this->model_catalog_product->getProduct($product_id);
 
 			if($product) {
 				$this->data['product'] = $product;
 				$this->data['real_price'] = $this->currency->getValue() * $this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax'));
+				$this->data['options'] = $data_s['option_type']." ".$data_s['option_chooser'];
 			}
 
 			if(($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {

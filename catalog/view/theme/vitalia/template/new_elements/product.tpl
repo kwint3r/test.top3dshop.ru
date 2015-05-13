@@ -32,6 +32,13 @@
 		
 		<?php if ($product['price']>0) {?>
 		<div class="price" id="<?php echo $product['product_id']; ?>">
+
+            <?php
+            //echo $_SERVER['REQUEST_URI'];
+               if ($_SERVER['REQUEST_URI'] == "/materiali/casting-silicon/") {
+                echo "От ";
+            }?>
+
 			<?php if (!$product['special']) { ?>
 			<?php echo $product['price']; ?>
 			<?php } else { ?>

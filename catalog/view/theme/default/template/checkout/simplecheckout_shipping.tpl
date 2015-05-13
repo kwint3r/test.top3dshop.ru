@@ -49,34 +49,69 @@
                 <?php } ?>
                 <?php if (empty($shipping_method['error'])) { ?>
                     <?php foreach ($shipping_method['quote'] as $quote) { ?>
-                        <tr>
-                            <td class="code">
-                                <input type="radio" name="shipping_method" value="<?php echo $quote['code']; ?>" id="<?php echo $quote['code']; ?>" <?php if ($quote['code'] == $code) { ?>checked="checked"<?php } ?> onchange="simplecheckout_reload('shipping_changed');" />
-                            </td>
-                            <td class="title" valign="middle">
-                                <label for="<?php echo $quote['code']; ?>">
-                                    <?php echo $quote['title']; ?>
-                                </label>
-                                <?php if (!empty($quote['img'])) { ?>
-                                <label for="<?php echo $quote['code']; ?>">
-                                    <img src="<?php echo $quote['img']; ?>" width="60" height="32" border="0" style="display:block;margin:3px;">
-                                </label>
-                                <?php } ?>
-                            </td>
-                            <td class="quote">
-                                <label for="<?php echo $quote['code']; ?>"><?php echo $quote['text']; ?></label>
-                            </td>
-                        </tr>
-                        <?php if (!empty($quote['description'])) { ?>
+                        <?php if ($quote['code'] == 'dellin.dellin') { ?>
                             <tr>
                                 <td class="code">
+                                    <input type="radio" name="shipping_method" value="<?php echo $quote['code']; ?>" id="<?php echo $quote['code']; ?>" <?php if ($quote['code'] == $code) { ?>checked="checked"<?php } ?> onchange="simplecheckout_reload('shipping_changed');" />
                                 </td>
-                                <td class="title">
-                                    <label for="<?php echo $quote['code']; ?>"><?php echo $quote['description']; ?></label>
+                                <td class="title" valign="middle">
+                                    <label for="<?php echo $quote['code']; ?>">
+                                        Доставка по России и СНГ<?php //echo $quote['title']; ?>
+                                    </label>
+                                    <?php if (!empty($quote['img'])) { ?>
+                                    <label for="<?php echo $quote['code']; ?>">
+                                        <img src="<?php echo $quote['img']; ?>" width="60" height="32" border="0" style="display:block;margin:3px;">
+                                    </label>
+                                    <?php } ?>
                                 </td>
                                 <td class="quote">
+                                    <label for="<?php echo $quote['code']; ?>"><?php echo $quote['text']; ?></label>
                                 </td>
                             </tr>
+                            <tr>
+                                <td colspan="3"><b>Введите название Вашего города</b></td>
+                            </tr>
+                            <?php if (!empty($quote['description'])) { ?>
+                                <tr>
+                                    <td class="code">
+                                    </td>
+                                    <td class="title">
+                                        <label for="<?php echo $quote['code']; ?>"><?php echo $quote['description']; ?></label>
+                                    </td>
+                                    <td class="quote">
+                                    </td>
+                                </tr>
+                            <?php } ?>
+                        <?php } else { ?>
+                            <tr>
+                                <td class="code">
+                                    <input type="radio" name="shipping_method" value="<?php echo $quote['code']; ?>" id="<?php echo $quote['code']; ?>" <?php if ($quote['code'] == $code) { ?>checked="checked"<?php } ?> onchange="simplecheckout_reload('shipping_changed');" />
+                                </td>
+                                <td class="title" valign="middle">
+                                    <label for="<?php echo $quote['code']; ?>">
+                                        <?php echo $quote['title']; ?>
+                                    </label>
+                                    <?php if (!empty($quote['img'])) { ?>
+                                    <label for="<?php echo $quote['code']; ?>">
+                                        <img src="<?php echo $quote['img']; ?>" width="60" height="32" border="0" style="display:block;margin:3px;">
+                                    </label>
+                                    <?php } ?>
+                                </td>
+                                <td class="quote">
+                                    <label for="<?php echo $quote['code']; ?>"><?php echo $quote['text']; ?></label>
+                                </td>
+                            </tr>
+                            <?php if (!empty($quote['description'])) { ?>
+                                <tr>
+                                    <td class="code">
+                                    </td>
+                                    <td class="title">
+                                        <label for="<?php echo $quote['code']; ?>"><?php echo $quote['description']; ?></label>
+                                    </td>
+                                    <td class="quote">
+                                    </td>
+                                </tr>
+                            <?php } ?>
                         <?php } ?>
                     <?php } ?>
                 <?php } else { ?>
@@ -98,9 +133,6 @@
                 </tr>
                 <?php } ?>
                 <?php } ?>
-                <tr>
-                    <td colspan="3"><b>Доставка по России и СНГ</b></td>
-                </tr>
         </table>
         <input type="hidden" name="shipping_method_current" value="<?php echo $code ?>" />
         <input type="hidden" name="shipping_method_checked" value="<?php echo $checked_code ?>" />

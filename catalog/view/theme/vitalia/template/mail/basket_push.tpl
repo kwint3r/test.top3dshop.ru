@@ -92,25 +92,19 @@ border-radius: 4px;
         </tbody>
     </table>
 	
-	<div style="color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 18px;">Продажа:&nbsp;<a href="http://top3dshop.ru/kupit-3d-printer" style="color: rgb(30, 90, 142);">3D принтеры</a>&nbsp;&nbsp;<a href="http://top3dshop.ru/kupit-3d-skaner" style="color: rgb(30, 90, 142);">3D сканеры</a>&nbsp;&nbsp;<a href="http://top3dshop.ru/kupit-3d-gadjet/" style="color: rgb(30, 90, 142);">3D гаджеты</a>&nbsp;&nbsp;<a href="http://top3dshop.ru/materiali" style="color: rgb(30, 90, 142);">Расходные материалы</a></div>
-
-	<div style="color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 18px;">Услуги: &nbsp;&nbsp;&nbsp;<a href="http://top3dshop.ru/3d-pechat-ob-ektov.html" style="color: rgb(30, 90, 142);">3D печать</a>&nbsp;&nbsp;<a href="http://top3dshop.ru/3d-skanirovanie.html" style="color: rgb(30, 90, 142);">3D сканирование</a>&nbsp;&nbsp;<a href="http://my3dgift.ru/" style="color: rgb(30, 90, 142);">Изготовление 3D фигурок</a>&nbsp;&nbsp;<a href="http://top3dshop.ru/servisnoe-obsluzhivanie-i-remont.html" style="color: rgb(30, 90, 142);">Ремонт и сервис</a>&nbsp;&nbsp;<a href="http://top3dshop.ru/obuchenie.html" style="color: rgb(30, 90, 142);">Обучение</a></div>
-
-	<div style="color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 18px;">Условия: &nbsp;<a href="http://top3dshop.ru/oplata-i-dostavka.html" style="color: rgb(30, 90, 142);">Оплата и доставка</a>&nbsp;&nbsp;<a href="http://top3dshop.ru/to-dealers.html" style="color: rgb(30, 90, 142);">Поставщикам</a>&nbsp;&nbsp;<a href="http://top3dshop.ru/dealer-network.html" style="color: rgb(30, 90, 142);">Дилерская сеть</a></div>
-
 	<div style="color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 18px;"><strong>&nbsp;</strong></div>
 
-	<div style="color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 18px;">&nbsp;
-		<a href="http://vk.com/top3dshop" style="color: rgb(30, 90, 142);">
+	<div style="color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 18px;">
+		<a href="http://vk.com/top3dshop" style="color: rgb(30, 90, 142); margin: 0 8px;">
 			<img alt="" src="http://top3dshop.ru/image/data/main/social/vk.png" style="padding: 1px; margin: 1px; border: none; outline: rgb(30, 90, 142) solid 1px;" />
-		</a>&nbsp;
-		<a href="http://instagram.com/top3dshop" style="color: rgb(30, 90, 142);">
+		</a>
+		<a href="http://instagram.com/top3dshop" style="color: rgb(30, 90, 142); margin: 0 8px;">
 			<img alt="" src="http://top3dshop.ru/image/data/main/social/instagram.png" style="padding: 1px; margin: 1px; border: none; outline: rgb(30, 90, 142) solid 1px;" />
-		</a>&nbsp;
-		<a href="https://www.facebook.com/top3dshop?fref=ts" style="color: rgb(30, 90, 142);">
+		</a>
+		<a href="https://www.facebook.com/top3dshop?fref=ts" style="color: rgb(30, 90, 142); margin: 0 8px;">
 			<img alt="" src="http://top3dshop.ru/image/data/main/social/facebook.png" style="padding: 1px; margin: 1px; border: none; outline: rgb(30, 90, 142) solid 1px;" />
-		</a>&nbsp;
-		<a href="http://www.youtube.com/channel/UC9VmL-dihNog3GoapRNd42g" style="color: rgb(30, 90, 142);">
+		</a>
+		<a href="http://www.youtube.com/channel/UC9VmL-dihNog3GoapRNd42g" style="color: rgb(30, 90, 142); margin: 0 8px;">
 			<img alt="" src="http://top3dshop.ru/image/data/main/social/youtube.png" style="padding: 1px; margin: 1px; border: none; outline: rgb(30, 90, 142) solid 1px;" />
 		</a>
 	</div>
