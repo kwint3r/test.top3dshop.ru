@@ -74,7 +74,7 @@
 		<tbody>
 			<tr>
 				<td>
-					<a href="/kupit-3d-printer/autoprom/" title="Автопром">Автопром</a>
+					<a href="/kupit-3d-printer/autoprom/" title="Автопром">Автомобильная промышленность</a>
 				</td>
 			</tr>
 			<tr>
@@ -84,12 +84,17 @@
 			</tr>
 				<tr>
 				<td>
-					<a href="/kupit-3d-printer/aerospace/" title="Аэрокосмическая">Аэрокосмическая</a>
+					<a href="/kupit-3d-printer/aerospace/" title="Аэрокосмическая">Аэрокосмическая промышленность</a>
 				</td>
 			</tr>
 				<tr>
 				<td>
 					<a href="/kupit-3d-printer/design/" title="Дизайн">Дизайн</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/kupit-3d-printer/for-home/" title="Для дома">Для дома</a>
 				</td>
 			</tr>
 				<tr>
@@ -112,6 +117,11 @@
 					<a href="/kupit-3d-printer/education/" title="Образование">Образование</a>
 				</td>
 			</tr>
+			 <tr>
+				<td>
+					<a href="/kupit-3d-printer/food/" title="Пищевая">Пищевая</a>
+				</td>
+			</tr>
 				<tr>
 				<td>
 					<a href="/kupit-3d-printer/manufacturing/" title="Производство">Производство</a>
@@ -127,6 +137,11 @@
 					<a href="/kupit-3d-printer/stomatology/" title="Стоматология">Стоматология</a>
 				</td>
 			</tr>
+			 <tr>
+				<td>
+					<a href="/kupit-3d-printer/building/" title="Строительная">Строительная</a>
+				</td>
+			</tr>
 				<tr>
 				<td>
 					<a href="/kupit-3d-printer/souvenirs/" title="Сувенирная промышленность">Сувенирная промышленность</a>
@@ -139,7 +154,7 @@
 			</tr>
 				<tr>
 				<td>
-					<a href="/kupit-3d-printer/jewelery/" title="Ювелирная промышленность">Ювелирная промышленность</a>
+					<a href="/kupit-3d-printer/jewelery/" title="Ювелирная промышленность">Ювелирное дело</a>
 				</td>
 			</tr>
 			</tbody>

@@ -234,3 +234,4 @@ catalog/view/theme/vitalia/template/account/login.tpl
 catalog/controller/account/password.php
 catalog/view/theme/default/template/checkout/simplecheckout_cart_empty.tpl
 catalog/controller/account/wishlist.php
+system/library/themeoptions.php

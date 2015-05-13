@@ -91,7 +91,7 @@ if($config->get( 'config_store_id' ) == 0) {
 	$store = $config->get( 'config_store_id' );
 }
 
-require_once(DIR_SYSTEM . 'library/themeoptions.php');
+require_once(VQMod::modCheck(DIR_SYSTEM . 'library/themeoptions.php'));
 $theme_options = new ThemeOptions($config->get('config_template'), $store, $theme);
 $registry->set('theme_options', $theme_options);
 

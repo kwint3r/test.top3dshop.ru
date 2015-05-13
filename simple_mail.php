@@ -252,9 +252,10 @@ $attachment
         }else{
             $output = "Письмо не отправлено. Ошибка: " . $result;
         }
+
+
     }   
-
-
+    }   
     //mail($to, '=?UTF-8?B?'.base64_encode($subject).'?=', $message, $signed_headers.$headers, "-fnoreply@top3dshop.ru");    
 //    require_once './scripts/smtpmail.php';
 //    smtpmail($to, '=?UTF-8?B?'.base64_encode($subject).'?=', $message, $signed_headers.$headers);    
@@ -272,4 +273,3 @@ $attachment
         //echo '<meta http-equiv="refresh" content="4;URL='.$_SERVER['HTTP_REFERER'].'">';
     //}
     }
-}

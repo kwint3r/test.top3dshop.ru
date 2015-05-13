@@ -517,7 +517,7 @@
 	  
 	  if (isset($record_info)) { 
 		  $tabs[] = array(
-		  	'heading' => 'Прочитать обзор',
+		  	'heading' => 'Обзор',
 		  	'content' => 'desc',
 		  	'sort' => 7
 		  );
