@@ -555,7 +555,7 @@
   		echo '<div id="'.$id.'" class="tab-content">'.$tab['content'].'</div>';
   	}
   } ?>
-  <div id="tab-description" class="tab-content" itemprop="description"><a href="/top-3d-shop-2-years.html"><img src="/image/data/main/banners/dr_product.png"></a><br/><br/><br/> <?php echo $description; ?></div>
+  <div id="tab-description" class="tab-content" itemprop="description"> <a href="/choise-3d-printer.html"><img src="/image/data/main/banners/banner_choise_3d_printer.png"></a><br/><br/><br/><?php echo $description; ?></div> 
   <?php if (isset($record_info)) { ?>
 	<div id="tab-desc" class="tab-content" itemprop="desc"><?php echo html_entity_decode($record_info[0]['description']); ?></div>
   <?php } ?>

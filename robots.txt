@@ -64,7 +64,10 @@ Disallow: page=*
 Disallow: search*
 Disallow: *page=
 Disallow: *page-
-
+User-agent: Googlebot
+Disallow:
+User-agent: Googlebot-image
+Disallow:
 Host: top3dshop.ru
 Sitemap: http://top3dshop.ru/index.php?route=feed/google_sitemap
 Allow: /index.php?route=feed/google_sitemap
