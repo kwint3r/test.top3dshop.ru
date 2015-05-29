@@ -27,11 +27,11 @@
         <?php } ?>
         <?php if ($product['price'] && $product['price'] > 0) { ?>
         <div class="cart">
-          <a onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button"><span><?php echo $button_cart; ?></span></a>
+          <a class="button" href="<?php echo $product['href']; ?>"><span>Купить<?php //echo $button_cart; ?></span></a>
         </div>
         <?php } else { ?>
         <div class="cart">
-          <a class="button" id="ay" onclick="instockrequest('<?php echo $product['product_id']?>')">Запросить КП</a>
+          <a class="button" href="<?php echo $product['href']; ?>">Купить</a>
         </div>
         <?php }?>
         </div>

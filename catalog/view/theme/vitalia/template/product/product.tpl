@@ -208,7 +208,14 @@
 			        <?php if ($reward) { ?>
 			        <span><?php echo $text_reward; ?></span> <?php echo $reward; ?><br />
 			        <?php } ?>
-			        <span><?php echo $text_stock; ?></span> <?php echo $stock; ?></div>
+			        <span><?php echo $text_stock; ?></span>
+			        	<?php if($stock == 'В наличии') { ?>
+			        		<FONT color="green"> <?php echo $stock; ?></FONT>
+			        	<?php } else { ?>
+			        		<?php echo $stock; ?>
+			        	<?php } ?>
+
+			        </div>
 			      <?php if ($price>0) { ?>
 			      <div class="price">
 			        <?php if (!$special) { ?>
@@ -287,8 +294,7 @@
 			            <!--<?php //if ($option_value['price']) { ?>
 			            (<?php //echo $option_value['price_prefix']; ?><?php //echo $option_value['price']; ?>)
 			            <?php //} ?>-->
-
-			            (<?php echo $option_value['sum_price']; ?>)
+			            	(<?php echo $option_value['sum_price']; ?>)
 
 			          </label>
 			          <br />
@@ -306,7 +312,7 @@
 			          <label for="option-value-<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
 			            <?php if ($option_value['price']) { ?>
 			            <!--(<?php //echo $option_value['price_prefix']; ?><?php //echo $option_value['price']; ?>)-->
-			            (<?php echo $option_value['sum_price']; ?>)
+			            	(+ <?php echo $option_value['sum_price']; ?>)
 			            <?php } ?>
 			          </label>
 			          <br />
@@ -586,7 +592,7 @@
   		echo '<div id="'.$id.'" class="tab-content">'.$tab['content'].'</div>';
   	}
   } ?>
-  <div id="tab-description" class="tab-content" itemprop="description"><a href="/top-3d-shop-2-years.html"><img src="/image/data/main/banners/dr_product.png"></a><br/><br/><br/> <?php echo $description; ?></div>
+  <div id="tab-description" class="tab-content" itemprop="description"><a href="/choise-3d-printer.html"><img src="/image/data/main/banners/banner_choise_3d_printer.png"></a><br/><br/><br/> <?php echo $description; ?></div>
   <?php if (false) { ?>
 
 	<div id="tab-desc" class="tab-content" itemprop="desc">

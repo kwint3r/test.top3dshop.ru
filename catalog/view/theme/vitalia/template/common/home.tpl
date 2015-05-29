@@ -131,6 +131,7 @@ $modules = new Modules($this->registry);
 							}
 							?>
 						<?php } ?>
+						<?php include('catalog/view/theme/'.$this->config->get('config_template').'/template/ivnz/texts.tpl'); ?>
 					</div>
 				</div>
 			</div>

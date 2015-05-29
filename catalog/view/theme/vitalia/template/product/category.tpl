@@ -1113,6 +1113,13 @@
   <p style="text-align: center;font: 18px Open Sans;font-weight:bold;">Мы подобрали для Вас самые оптимальные 3D-принтеры, подходящие для Ювелирного дела</p>
   <br/>
   <hr>
+
+<?php } else if ($_SERVER['REQUEST_URI'] == '/kupit-3d-skaner/architectural/') {?>
+
+<?php } else if ($_SERVER['REQUEST_URI'] == '/kupit-3d-skaner/architectural/') {?>
+
+<?php } else if ($_SERVER['REQUEST_URI'] == '/kupit-3d-skaner/architectural/') {?>
+
 <?php } else {?>
   <? if(isset($manufacturers)): ?>
 
@@ -1548,8 +1555,6 @@
 <?php } ?>
   <?php include('catalog/view/theme/'.$this->config->get('config_template').'/template/module/simple_form.tpl'); ?>
 
-
-
 <script type="text/javascript"><!--
 $('#button-vkredit').bind('click', function() {
 	$('#vkredit_input')
@@ -1584,5 +1589,9 @@ display(view);
 display('grid');
 }
 //--></script> 
+<? if(isset($this->data['description']) && !empty($this->data['description'])): ?>
+ <?= $this->data['description']; ?>
+ <? endif; ?>
 <?php include('catalog/view/theme/'.$this->config->get('config_template').'/template/new_elements/wrapper_bottom.tpl'); ?>
+
 <?php echo $footer; ?>

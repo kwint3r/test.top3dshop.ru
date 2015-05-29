@@ -148,6 +148,9 @@
     </div>
   </div>
   <div class="pagination"><?php echo $pagination; ?></div>
+  <?php
+	include('catalog/view/theme/'.$this->config->get('config_template').'/template/ivnz/texts.tpl');
+  ?>
   <?php } else { ?>
   <div class="content"><?php echo $text_empty; ?></div>
   <div class="buttons">

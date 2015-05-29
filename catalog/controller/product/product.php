@@ -222,7 +222,7 @@ class ControllerProductProduct extends Controller {
 				'separator' => $this->language->get('text_separator')
 			);			
 			//$this->document->setTitle($product_info['name']);	
-			$this->document->setTitle('Купить' .' ' .$product_info['name'] . ' с доставкой по РФ и СНГ в мгазине 3D техники №1 - Top 3D Shop!');
+			$this->document->setTitle('Купить' .' ' .$product_info['name'] . ' с доставкой по Москве, Санкт-Петербургу и всей РФ в магазине 3D техники №1 - Top 3D Shop!');
 			$this->document->setDescription($product_info['meta_description']);
 			$this->document->setKeywords($product_info['meta_keyword']);
 			$this->document->addLink($this->url->link('product/product', 'product_id=' . $this->request->get['product_id']), 'canonical');
@@ -377,7 +377,11 @@ class ControllerProductProduct extends Controller {
 						if (!$option_value['subtract'] || ($option_value['quantity'] > 0)) {
 							if ((($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) && (float)$option_value['price']) {
 								$price = $this->currency->format($this->tax->calculate($option_value['price'], $product_info['tax_class_id'], $this->config->get('config_tax')));
-			            		$sum_price = $base_price + $option_value['price']; 
+			            		if ($option['type'] == 'checkbox') {
+			            			$sum_price = $option_value['price']; 
+			            		} else {
+			            			$sum_price = $base_price + $option_value['price']; 
+			            		}
 							} else {
 								$price = false;
 			            		$sum_price = $base_price; 
